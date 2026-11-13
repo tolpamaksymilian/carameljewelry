@@ -1,0 +1,52 @@
+.stage {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding:
+    calc(var(--frame-inset) + clamp(40px, 8vh, 88px) + env(safe-area-inset-top))
+    calc(var(--frame-inset) + clamp(20px, 6vw, 64px))
+    calc(var(--frame-inset) + clamp(40px, 8vh, 88px) + env(safe-area-inset-bottom));
+  overflow: hidden;
+}
+
+/* Cienka złota ramka — jak passe-partout lub wieczko pudełka na biżuterię */
+.frame {
+  position: fixed;
+  inset: var(--frame-inset);
+  border: 1px solid var(--hairline);
+  pointer-events: none;
+}
+
+/* Wewnętrzna, jeszcze subtelniejsza linia */
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(154, 116, 66, 0.14);
+}
+
+/* Drobne romby w narożnikach */
+.corner {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 3px var(--bg);
+}
+.tl { top: -4px; left: -4px; }
+.tr { top: -4px; right: -4px; }
+.bl { bottom: -4px; left: -4px; }
+.br { bottom: -4px; right: -4px; }
+
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

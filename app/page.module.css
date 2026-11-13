@@ -1,0 +1,15 @@
+.logo {
+  margin-bottom: clamp(2.75rem, 8vh, 4.5rem);
+}
+
+.ornament {
+  margin-bottom: clamp(2.5rem, 7vh, 4rem);
+}
+
+.eyebrow {
+  margin-bottom: clamp(0.9rem, 2.4vh, 1.4rem);
+}
+
+.display {
+  margin-bottom: clamp(2rem, 5.5vh, 3rem);
+}
