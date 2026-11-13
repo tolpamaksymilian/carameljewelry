@@ -1,15 +1,19 @@
 .logo {
-  margin-bottom: clamp(0.6rem, 2.6svh, 1.75rem);
+  margin-bottom: clamp(0.6rem, 2.4svh, 2.25rem);
 }
 
 .divider {
-  margin-bottom: clamp(0.6rem, 2.6svh, 1.75rem);
+  margin-bottom: clamp(0.6rem, 2.4svh, 2.25rem);
 }
 
 .eyebrow {
-  margin-bottom: clamp(0.35rem, 1.2svh, 0.8rem);
+  margin-bottom: clamp(0.35rem, 1.2svh, 1rem);
 }
 
 .display {
-  margin-bottom: clamp(0.6rem, 2.8svh, 1.75rem);
+  margin-bottom: clamp(0.6rem, 2.4svh, 2rem);
+}
+
+.lead {
+  margin-bottom: clamp(0.9rem, 3svh, 2.5rem);
 }

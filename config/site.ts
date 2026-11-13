@@ -25,9 +25,9 @@ export const siteConfig = {
    */
   url: process.env.NEXT_PUBLIC_SITE_URL || undefined,
 
-  /** Na przyszłość: linki do social mediów (jeszcze nieużywane). */
+  /** Profile w mediach społecznościowych. */
   social: {
-    instagram: "",
-    facebook: "",
+    instagram: "https://www.instagram.com/cara.mel.jewelry/",
+    facebook: "https://www.facebook.com/profile.php?id=61595912694326",
   },
 } as const;

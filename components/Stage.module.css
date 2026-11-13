@@ -6,16 +6,16 @@
   display: grid;
   place-items: center;
   padding:
-    calc(var(--frame-inset) + clamp(12px, 4svh, 56px) + env(safe-area-inset-top))
-    calc(var(--frame-inset) + clamp(16px, 5vw, 44px))
-    calc(var(--frame-inset) + clamp(12px, 4svh, 56px) + env(safe-area-inset-bottom));
+    calc(var(--frame-inset) + clamp(10px, 2.5svh, 40px) + env(safe-area-inset-top))
+    calc(var(--frame-inset) + clamp(14px, 4vw, 44px))
+    calc(var(--frame-inset) + clamp(10px, 2.5svh, 40px) + env(safe-area-inset-bottom));
   overflow: hidden;
 }
 
 /* Miejsce na naszyjnik u góry */
 .withGarland {
   padding-top: calc(var(--frame-inset) + var(--garland-h) + env(safe-area-inset-top));
-  padding-bottom: calc(var(--frame-inset) + clamp(10px, 3svh, 40px) + env(safe-area-inset-bottom));
+  padding-bottom: calc(var(--frame-inset) + clamp(10px, 2.5svh, 36px) + env(safe-area-inset-bottom));
 }
 
 /* Cienka złota ramka — jak passe-partout lub wieczko pudełka na biżuterię */
@@ -51,7 +51,7 @@
 .content {
   position: relative;
   width: 100%;
-  max-width: 540px;
+  max-width: 920px;
   display: flex;
   flex-direction: column;
   align-items: center;

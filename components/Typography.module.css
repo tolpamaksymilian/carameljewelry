@@ -4,7 +4,7 @@
   margin: 0;
   font-family: var(--font-sans-stack);
   font-weight: 400;
-  font-size: clamp(0.58rem, min(1.8vw, 1.5svh), 0.62rem);
+  font-size: clamp(0.66rem, min(2.6vw, 1.9svh), 0.95rem);
   text-transform: uppercase;
   letter-spacing: 0.42em;
   text-indent: 0.42em;
@@ -16,7 +16,7 @@
   font-family: var(--font-serif-stack);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(2rem, min(9.5vw, 8.5svh), 4.4rem);
+  font-size: clamp(2.6rem, min(13vw, 11.5svh), 7.5rem);
   line-height: 0.95;
   letter-spacing: -0.01em;
   color: var(--chocolate);
@@ -27,7 +27,7 @@
   max-width: 31em;
   font-family: var(--font-serif-stack);
   font-weight: 400;
-  font-size: clamp(0.88rem, min(3vw, 2.3svh), 0.95rem);
+  font-size: clamp(0.98rem, min(3.9vw, 2.7svh), 1.55rem);
   line-height: 1.6;
   color: var(--caramel-dark);
   text-wrap: balance;
@@ -38,12 +38,12 @@
   align-items: center;
   justify-content: center;
   gap: 0.9em;
-  min-height: 44px;
-  padding: 0.65rem 1.7rem;
+  min-height: 48px;
+  padding: clamp(0.7rem, 1.6svh, 1rem) clamp(1.6rem, 4vw, 2.6rem);
   border: 1px solid var(--copper);
   font-family: var(--font-sans-stack);
   font-weight: 400;
-  font-size: 0.6rem;
+  font-size: clamp(0.64rem, min(2.4vw, 1.6svh), 0.82rem);
   text-transform: uppercase;
   letter-spacing: 0.3em;
   text-decoration: none;
@@ -58,9 +58,9 @@
 
 @media (max-width: 420px) {
   .button {
-    padding: 0.65rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     letter-spacing: 0.2em;
-    font-size: 0.58rem;
+    font-size: 0.64rem;
   }
 }
 
@@ -91,4 +91,11 @@
 }
 .button:hover .arrow {
   transform: translateX(-4px);
+}
+
+@media (max-height: 520px) {
+  .eyebrow { font-size: 0.58rem; }
+  .display { font-size: clamp(1.6rem, 11svh, 2.6rem); }
+  .lead { font-size: clamp(0.78rem, 2.8svh, 0.98rem); line-height: 1.45; max-width: 44em; }
+  .button { min-height: 40px; padding: 0.5rem 1.4rem; }
 }

@@ -1,5 +1,6 @@
 import { BeadDivider } from "@/components/BeadDivider";
 import { BrandLogo } from "@/components/BrandLogo";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Stage } from "@/components/Stage";
 import t from "@/components/Typography.module.css";
 import styles from "./page.module.css";
@@ -25,10 +26,12 @@ export default function HomePage() {
         już wkrótce
       </h2>
 
-      <p className={`${t.lead} reveal`} style={delay(1.6)}>
+      <p className={`${t.lead} ${styles.lead} reveal`} style={delay(1.6)}>
         Tworzymy miejsce, w&nbsp;którym naturalne piękno spotyka się z&nbsp;ponadczasową elegancją.
         Już niedługo zaprosimy Cię do świata Caramel Handmade Jewelry.
       </p>
+
+      <SocialLinks delay={1.9} />
     </Stage>
   );
 }

@@ -2,10 +2,10 @@ import styles from "./Sparkles.module.css";
 
 /** Kilka drobnych, czteroramiennych gwiazdek jak w logo — migoczą powoli, każda w innym rytmie. */
 const SPARKLES = [
-  { left: "14%", top: "34%", size: 10, d: 0.6 },
-  { left: "86%", top: "46%", size: 8, d: 2.4 },
-  { left: "10%", top: "78%", size: 6, d: 3.8 },
-  { left: "90%", top: "82%", size: 11, d: 1.4 },
+  { left: "14%", top: "34%", size: 16, d: 0.6 },
+  { left: "86%", top: "46%", size: 12, d: 2.4 },
+  { left: "10%", top: "78%", size: 10, d: 3.8 },
+  { left: "90%", top: "82%", size: 18, d: 1.4 },
 ];
 
 export function Sparkles() {

@@ -30,7 +30,14 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --frame-inset: clamp(10px, 2.2vmin, 24px);
   /* wysokość naszyjnika u góry strony głównej */
-  --garland-h: clamp(58px, min(12.25vw, 13svh), 133px);
+  --garland-h: clamp(70px, min(16vw, 14svh), 170px);
+}
+
+/* Bardzo niskie ekrany (np. telefon w poziomie) — mniejsze minimalne rozmiary */
+@media (max-height: 520px) {
+  :root {
+    --garland-h: clamp(40px, 13svh, 70px);
+  }
 }
 
 *,

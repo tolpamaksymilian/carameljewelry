@@ -1,6 +1,6 @@
 .divider {
   display: block;
-  width: clamp(120px, min(45vw, 22svh), 170px);
+  width: clamp(150px, min(62vw, 32svh), 320px);
   height: auto;
   overflow: visible;
   filter: drop-shadow(0 2px 3px rgba(110, 58, 22, 0.18));
@@ -38,4 +38,8 @@
 @media (prefers-reduced-motion: reduce) {
   .wire { animation: none; stroke-dashoffset: 0; }
   .beads { animation: none; opacity: 1; transform: none; }
+}
+
+@media (max-height: 520px) {
+  .divider { width: clamp(110px, 30svh, 150px); }
 }

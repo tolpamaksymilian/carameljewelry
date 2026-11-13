@@ -14,10 +14,10 @@
 }
 
 .lg {
-  width: clamp(150px, min(52vw, 38svh), 350px);
+  width: clamp(200px, min(86vw, 61svh), 760px);
 }
 .sm {
-  width: clamp(120px, min(34vw, 22svh), 175px);
+  width: clamp(170px, min(70vw, 42svh), 460px);
 }
 
 /* Błysk w miejscu gwiazdki logo (≈ 93,6% szerokości, 11% wysokości) */
@@ -45,4 +45,9 @@
   .glint {
     display: none;
   }
+}
+
+@media (max-height: 520px) {
+  .lg { width: clamp(120px, 50svh, 260px); }
+  .sm { width: clamp(110px, 30svh, 200px); }
 }
