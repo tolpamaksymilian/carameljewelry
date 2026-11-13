@@ -1,0 +1,89 @@
+.wrap {
+  position: absolute;
+  top: calc(var(--frame-inset) + 1px);
+  left: calc(var(--frame-inset) + 1px);
+  right: calc(var(--frame-inset) + 1px);
+  height: var(--garland-h);
+  overflow: hidden;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 2px rgba(110, 58, 22, 0.16));
+}
+
+.wires {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.wire,
+.chain {
+  fill: none;
+  stroke: #a9612a;
+  stroke-linecap: round;
+}
+.wire {
+  stroke-width: 1;
+  stroke-opacity: 0.75;
+}
+.chain {
+  stroke-width: 0.7;
+  stroke-opacity: 0.55;
+}
+
+/* Koralik: średnica = ułamek (--s) wysokości naszyjnika, zawsze okrągły */
+.bead {
+  position: absolute;
+  width: calc(var(--garland-h) * var(--s));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  animation: bead-in 0.9s var(--ease-out) forwards;
+  animation-delay: var(--d, 0s);
+}
+
+.pearl {
+  background:
+    radial-gradient(circle at 32% 30%, #fff 0 13%, transparent 15%),
+    radial-gradient(circle at 36% 32%, #ffffff 0%, #f7eee6 42%, #e4cfbf 78%, #c7a690 100%);
+}
+.copper,
+.tiny {
+  background: radial-gradient(circle at 34% 30%, #f8cf98 0%, #c47b3a 45%, #763c15 100%);
+}
+
+@keyframes bead-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Zawieszka — zaczepiona w najniższym punkcie sznura pereł */
+.pendantSlot {
+  position: absolute;
+  height: calc(var(--garland-h) * 76 / 210);
+  aspect-ratio: 24 / 76;
+  translate: -50% 0;
+  opacity: 0;
+  animation: bead-in 0.9s var(--ease-out) 0.3s forwards;
+}
+.pendant {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform-origin: 50% 0;
+  animation: swing 7s ease-in-out 1.6s infinite;
+}
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(2.2deg); }
+  70% { transform: rotate(-2.2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bead,
+  .pendantSlot { animation: none; opacity: 1; }
+  .pendant { animation: none; }
+}

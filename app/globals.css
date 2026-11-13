@@ -3,7 +3,11 @@
    ============================================================ */
 
 :root {
-  /* Paleta marki */
+  /* Paleta marki — miedź i karmel dopasowane do oryginalnego logo */
+  --copper: #b56a2c;
+  --copper-deep: #8b4a1e;
+  --copper-light: #e3a462;
+  /* dotychczasowe odcienie */
   --chocolate: #352019;
   --caramel-dark: #704736;
   --caramel: #b88a60;
@@ -17,24 +21,16 @@
   --bg: var(--cream);
   --text: var(--chocolate);
   --text-soft: var(--caramel-dark);
-  --hairline: rgba(154, 116, 66, 0.38);
+  --hairline: rgba(181, 106, 44, 0.32);
 
-  /* Złoty gradient — jak w logo na materiałach marki */
-  --gold-gradient: linear-gradient(
-    100deg,
-    #8c6536 0%,
-    #b48a52 22%,
-    #d9bd86 44%,
-    #b58b55 60%,
-    #8f6838 82%,
-    #a97f4a 100%
-  );
 
   --font-serif-stack: var(--font-serif), "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-sans-stack: var(--font-sans), "Jost", "Helvetica Neue", Arial, sans-serif;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --frame-inset: clamp(12px, 2.6vmin, 28px);
+  --frame-inset: clamp(10px, 2.2vmin, 24px);
+  /* wysokość naszyjnika u góry strony głównej */
+  --garland-h: clamp(58px, min(12.25vw, 13svh), 133px);
 }
 
 *,
@@ -55,8 +51,9 @@ body {
   background-color: var(--bg);
   /* Ciepłe światło i miękkie, satynowe przejścia tonalne */
   background-image:
-    radial-gradient(120% 70% at 50% -10%, rgba(230, 209, 166, 0.55) 0%, rgba(230, 209, 166, 0) 60%),
-    radial-gradient(80% 60% at 100% 100%, rgba(184, 138, 96, 0.16) 0%, rgba(184, 138, 96, 0) 70%),
+    radial-gradient(60% 45% at 50% 42%, rgba(255, 252, 247, 0.85) 0%, rgba(255, 252, 247, 0) 70%),
+    radial-gradient(120% 70% at 50% -10%, rgba(240, 214, 182, 0.55) 0%, rgba(240, 214, 182, 0) 60%),
+    radial-gradient(80% 60% at 100% 100%, rgba(196, 123, 58, 0.13) 0%, rgba(196, 123, 58, 0) 70%),
     radial-gradient(70% 55% at 0% 85%, rgba(237, 224, 208, 0.9) 0%, rgba(237, 224, 208, 0) 70%);
   background-attachment: fixed;
   color: var(--text);
@@ -69,7 +66,7 @@ body {
 }
 
 ::selection {
-  background: rgba(199, 164, 107, 0.35);
+  background: rgba(227, 164, 98, 0.35);
   color: var(--chocolate);
 }
 
@@ -78,7 +75,7 @@ a {
 }
 
 :focus-visible {
-  outline: 1px solid var(--gold-deep);
+  outline: 1px solid var(--copper);
   outline-offset: 4px;
 }
 

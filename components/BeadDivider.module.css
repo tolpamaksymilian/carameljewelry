@@ -1,0 +1,41 @@
+.divider {
+  display: block;
+  width: clamp(120px, min(45vw, 22svh), 170px);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 2px 3px rgba(110, 58, 22, 0.18));
+}
+
+.wire {
+  fill: none;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-dasharray: 110;
+  stroke-dashoffset: 110;
+  animation: draw 1.6s var(--ease-out) forwards;
+  animation-delay: var(--delay, 0s);
+}
+.left {
+  stroke-dashoffset: -110;
+}
+
+.beads {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(0.6);
+  animation: pop 1s var(--ease-out) forwards;
+  animation-delay: calc(var(--delay, 0s) + 0.35s);
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes pop {
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wire { animation: none; stroke-dashoffset: 0; }
+  .beads { animation: none; opacity: 1; transform: none; }
+}

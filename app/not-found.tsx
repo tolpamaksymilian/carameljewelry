@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
-import { Ornament } from "@/components/Ornament";
+import { BeadDivider } from "@/components/BeadDivider";
 import { Stage } from "@/components/Stage";
 import t from "@/components/Typography.module.css";
 import styles from "./not-found.module.css";
@@ -15,9 +15,9 @@ const delay = (s: number) => ({ "--delay": `${s}s` }) as React.CSSProperties;
 export default function NotFound() {
   return (
     <Stage>
-      <div className={styles.logo}>
+      <Link href="/" className={styles.logo} aria-label="Caramel Handmade Jewelry — strona główna">
         <BrandLogo size="sm" delay={0.1} />
-      </div>
+      </Link>
 
       <p className={`${t.display} ${styles.code} reveal`} style={delay(0.45)} aria-hidden="true">
         404
@@ -28,7 +28,7 @@ export default function NotFound() {
       </h1>
 
       <div className={styles.ornament}>
-        <Ornament delay={0.85} />
+        <BeadDivider delay={0.85} />
       </div>
 
       <p className={`${t.lead} ${styles.lead} reveal`} style={delay(1)}>

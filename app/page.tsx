@@ -1,5 +1,5 @@
+import { BeadDivider } from "@/components/BeadDivider";
 import { BrandLogo } from "@/components/BrandLogo";
-import { Ornament } from "@/components/Ornament";
 import { Stage } from "@/components/Stage";
 import t from "@/components/Typography.module.css";
 import styles from "./page.module.css";
@@ -8,13 +8,13 @@ const delay = (s: number) => ({ "--delay": `${s}s` }) as React.CSSProperties;
 
 export default function HomePage() {
   return (
-    <Stage>
+    <Stage garland>
       <div className={styles.logo}>
-        <BrandLogo as="h1" size="lg" delay={0.15} />
+        <BrandLogo as="h1" size="lg" delay={0.2} />
       </div>
 
-      <div className={styles.ornament}>
-        <Ornament delay={0.9} />
+      <div className={styles.divider}>
+        <BeadDivider delay={0.9} />
       </div>
 
       <p className={`${t.eyebrow} ${styles.eyebrow} reveal`} style={delay(1.1)}>
@@ -25,7 +25,7 @@ export default function HomePage() {
         już wkrótce
       </h2>
 
-      <p className={`${t.lead} reveal`} style={delay(1.65)}>
+      <p className={`${t.lead} reveal`} style={delay(1.6)}>
         Tworzymy miejsce, w&nbsp;którym naturalne piękno spotyka się z&nbsp;ponadczasową elegancją.
         Już niedługo zaprosimy Cię do świata Caramel Handmade Jewelry.
       </p>

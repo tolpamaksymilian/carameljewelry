@@ -20,9 +20,11 @@ app/
   layout.tsx        – <html lang="pl">, fonty, metadane SEO, viewport
   page.tsx          – strona główna (zapowiedź)
   not-found.tsx     – strona 404 (→ out/404.html)
-  icon.svg          – favicon
+  icon.png          – favicon (litera C z logo)
+  apple-icon.png    – ikona dla iPhone/iPad
   globals.css       – paleta marki, tło, animacje
-components/         – BrandLogo, Ornament, Stage (ramka), Typography
+components/         – BrandLogo, BeadGarland (naszyjnik), BeadDivider, Sparkles, Stage (ramka), Typography
+public/brand/       – caramel-logo.webp (logo z przezroczystym tłem)
 config/site.ts      – nazwa, opis, indeksowanie, przyszłe linki social
 lib/fonts.ts        – Cormorant Garamond + Jost (hostowane lokalnie)
 netlify.toml        – build `npm run build`, publish `out`

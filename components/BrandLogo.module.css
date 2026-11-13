@@ -1,85 +1,48 @@
 .logo {
+  position: relative;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: inherit;
   font-weight: inherit;
-  line-height: 1;
+  line-height: 0;
 }
 
-.wordmark {
-  font-family: var(--font-serif-stack);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  text-indent: 0.2em; /* optyczne wyśrodkowanie przy rozstrzelonych literach */
-  line-height: 1;
-  background-image: var(--gold-gradient);
-  background-size: 220% 100%;
-  background-position: 100% 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  /* Jeden, powolny refleks światła przesuwający się po złocie */
-  animation:
-    rise 1.4s var(--ease-out) forwards,
-    sheen 3.6s var(--ease-out) 0.9s forwards;
-  animation-delay: var(--delay, 0s), calc(var(--delay, 0s) + 0.9s);
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(110, 58, 22, 0.14));
 }
 
-/* Nazwy animacji w CSS Modules są lokalne — dlatego `rise` jest zdefiniowane także tutaj */
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-    filter: blur(0);
-  }
+.lg {
+  width: clamp(150px, min(52vw, 38svh), 350px);
+}
+.sm {
+  width: clamp(120px, min(34vw, 22svh), 175px);
 }
 
-@keyframes sheen {
-  from { background-position: 100% 0; }
-  to { background-position: 0% 0; }
+/* Błysk w miejscu gwiazdki logo (≈ 93,6% szerokości, 11% wysokości) */
+.glint {
+  position: absolute;
+  left: 93.6%;
+  top: 11%;
+  width: 26%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 244, 222, 0.95) 0%, rgba(255, 220, 160, 0.35) 16%, rgba(255, 220, 160, 0) 42%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: twinkle 5.5s ease-in-out 2.2s infinite;
 }
 
-.tagline {
-  font-family: var(--font-sans-stack);
-  font-weight: 400;
-  text-transform: uppercase;
-  color: var(--caramel-dark);
-}
-
-/* ---------- Rozmiary ---------- */
-
-.lg .wordmark {
-  font-size: clamp(2.75rem, 12.5vw, 6.25rem);
-}
-.lg .tagline {
-  margin-top: clamp(0.85rem, 2.4vw, 1.35rem);
-  font-size: clamp(0.62rem, 2.3vw, 0.8rem);
-  letter-spacing: 0.52em;
-  text-indent: 0.52em;
-}
-
-.sm .wordmark {
-  font-size: clamp(1.6rem, 6vw, 2.25rem);
-}
-.sm .tagline {
-  margin-top: 0.6rem;
-  font-size: clamp(0.5rem, 1.7vw, 0.6rem);
-  letter-spacing: 0.48em;
-  text-indent: 0.48em;
+@keyframes twinkle {
+  0%, 62%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.55) rotate(0deg); }
+  72% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(20deg); }
+  84% { opacity: 0; transform: translate(-50%, -50%) scale(0.7) rotate(35deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wordmark {
-    animation: none;
-    opacity: 1;
-    background-position: 50% 0;
+  .glint {
+    display: none;
   }
 }
