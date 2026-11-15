@@ -1,0 +1,14 @@
+{
+  "name": "Caramel Jewelry",
+  "short_name": "Caramel",
+  "description": "Ręcznie robiona biżuteria z koralików i kamieni naturalnych.",
+  "lang": "pl",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F6ECE0",
+  "theme_color": "#F6ECE0",
+  "icons": [
+    { "src": "/ikony/ikona-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/ikony/ikona-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

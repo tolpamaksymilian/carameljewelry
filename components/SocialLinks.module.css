@@ -42,19 +42,6 @@
 .icon svg {
   width: 56%;
   height: 56%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.icon svg path {
-  fill: currentColor;
-  stroke: none;
-}
-.icon .dot {
-  fill: currentColor;
-  stroke: none;
 }
 
 .link:hover,

@@ -1,0 +1,92 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 1.6vw, 1.4rem);
+  margin-top: clamp(1rem, 1.6vw, 1.4rem);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  min-height: clamp(280px, 26vw, 340px);
+  padding: clamp(1.6rem, 3vw, 2.6rem);
+  overflow: hidden;
+}
+
+.honey {
+  background: var(--honey);
+  border-color: rgba(154, 116, 66, 0.25);
+}
+.honey :global(p) {
+  color: var(--chocolate);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100%;
+}
+
+.text {
+  margin: 0;
+  max-width: 26ch;
+  font-family: var(--font-serif-stack);
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.arrow {
+  --round: 54px;
+  margin-top: auto;
+}
+
+.circle {
+  width: clamp(150px, 16vw, 230px);
+  border-radius: 50%;
+  padding: 6px;
+  border: 1px solid var(--hairline);
+}
+
+/* Trzy kamienie ułożone na zakładkę */
+.stack {
+  display: flex;
+  align-items: center;
+}
+.stone {
+  width: clamp(76px, 8vw, 116px);
+  border-radius: 50%;
+  border: 3px solid #f2dfb8;
+  box-shadow: 0 10px 20px -12px rgba(110, 58, 22, 0.55);
+  background: #f2dfb8;
+}
+.stone + .stone {
+  margin-left: calc(clamp(76px, 8vw, 116px) * -0.32);
+}
+.stone:nth-child(2) {
+  transform: translateY(-14px);
+}
+
+@media (max-width: 1100px) {
+  .card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .circle,
+  .stack {
+    justify-self: end;
+    order: -1;
+  }
+  .arrow {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

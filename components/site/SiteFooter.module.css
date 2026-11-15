@@ -1,0 +1,157 @@
+.footer {
+  width: min(100% - 2 * var(--gutter), var(--max-w));
+  margin: clamp(0.5rem, 1.5vw, 1.5rem) auto 0;
+  padding-bottom: calc(var(--gutter) + env(safe-area-inset-bottom));
+}
+
+/* Pasek z perłą oddzielający stopkę */
+.divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+.dividerSvg {
+  width: min(100%, 520px);
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding: clamp(2.2rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 4rem) clamp(1.5rem, 3vw, 2.2rem);
+  border-radius: var(--radius-card);
+  background: rgba(255, 250, 244, 0.7);
+  border: 1px solid var(--card-line);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.logoLink {
+  display: block;
+  line-height: 0;
+}
+.about {
+  margin: 0;
+  max-width: 36ch;
+  font-family: var(--font-serif-stack);
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: var(--caramel-dark);
+  text-wrap: pretty;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.2rem 0;
+  font-family: var(--font-serif-stack);
+  font-size: 1.15rem;
+  color: var(--chocolate);
+  text-decoration: none;
+  transition: color 0.4s var(--ease-out);
+}
+.navLink:hover {
+  color: var(--copper-deep);
+}
+
+/* Ikona wyśrodkowana w pionie względem obu linii tekstu */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 52px;
+  padding: 0.35rem 0;
+  text-decoration: none;
+  color: var(--chocolate);
+}
+.contact > span:first-child {
+  --round: 40px;
+  transition: transform 0.5s var(--ease-out);
+}
+.contact:hover > span:first-child {
+  transform: rotate(-8deg) scale(1.05);
+}
+.contactText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+.contactLabel {
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--caramel);
+}
+.contactValue {
+  font-family: var(--font-serif-stack);
+  font-size: 1.12rem;
+  transition: color 0.4s var(--ease-out);
+}
+.contact:hover .contactValue {
+  color: var(--copper-deep);
+}
+
+.copy {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem 0.9rem;
+  margin: 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--card-line);
+  text-align: center;
+  font-family: var(--font-sans-stack);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--caramel);
+}
+
+.copyDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #f6e2b5 0%, #d6b273 50%, #9a7442 100%);
+}
+
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .inner {
+    grid-template-columns: 1fr;
+    padding-top: 2.6rem;
+  }
+}

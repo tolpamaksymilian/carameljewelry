@@ -1,0 +1,177 @@
+/* ---------- Miedziane romby w rogach ---------- */
+
+.corners {
+  position: absolute;
+  inset: var(--inset, 14px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.diamond {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: radial-gradient(circle at 35% 30%, #f6c78e, #b56a2c 60%, #7a3f17);
+  transform: rotate(45deg);
+}
+.tl { top: 0; left: 0; }
+.tr { top: 0; right: 0; }
+.bl { bottom: 0; left: 0; }
+.br { bottom: 0; right: 0; }
+
+/* ---------- Koraliki w rogach ---------- */
+
+.beadCorner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  pointer-events: none;
+  z-index: 2;
+}
+.bc_tl { top: 16px; left: 18px; }
+.bc_tr { top: 16px; right: 18px; flex-direction: row-reverse; }
+.bc_bl { bottom: 16px; left: 18px; }
+.bc_br { bottom: 16px; right: 18px; flex-direction: row-reverse; }
+
+.bead {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 1px 1.5px rgba(110, 58, 22, 0.25);
+}
+.small {
+  width: 5px;
+  height: 5px;
+}
+.copper {
+  background: radial-gradient(circle at 35% 30%, #f6c78e 0%, #c27a3a 45%, #7a3f17 100%);
+}
+.pearl {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 38% 34%, #ffffff 0%, #f6ece4 45%, #e2cbbb 80%, #c9a993 100%);
+}
+.pearl.small {
+  width: 6px;
+  height: 6px;
+}
+
+/* ---------- Rząd trzech koralików ---------- */
+
+.beadRow {
+  display: inline-flex;
+  align-items: center;
+}
+.ball {
+  display: block;
+  width: clamp(34px, 4vw, 52px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  box-shadow: 0 6px 14px -6px rgba(110, 58, 22, 0.45);
+}
+.ball + .ball {
+  margin-left: -10px;
+}
+.ballPearl {
+  background: radial-gradient(circle at 36% 32%, #ffffff 0%, #f6ece4 40%, #e2cbbb 78%, #c9a993 100%);
+}
+.ballCopper {
+  background: radial-gradient(circle at 34% 30%, #f6c78e 0%, #c47b3a 50%, #8b4a1e 100%);
+}
+.ballGold {
+  background: radial-gradient(circle at 34% 30%, #f6e2b5 0%, #d6b273 50%, #9a7442 100%);
+}
+
+/* ---------- Wachlarz promieni ---------- */
+
+.fan {
+  display: block;
+  width: clamp(64px, 7vw, 104px);
+  height: auto;
+  color: var(--copper);
+}
+.fanBead {
+  fill: var(--copper);
+}
+
+/* ---------- Gwiazdki ---------- */
+
+.sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  fill: #c98a4b;
+  opacity: 0;
+  transform: scale(0.4);
+  animation: twinkle 6.5s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+  45% { opacity: 0.8; transform: scale(1) rotate(15deg); }
+  60% { opacity: 0.55; transform: scale(0.85) rotate(20deg); }
+}
+
+@media (max-width: 600px) {
+  .sparkle:nth-child(2n) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle { animation: none; opacity: 0.5; transform: none; }
+}
+
+/* ---------- Ozdobnik między sekcjami: złota linia z trzema koralikami ---------- */
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  width: min(100% - 2 * var(--gutter), 560px);
+  margin: 0 auto;
+}
+/* między dużymi sekcjami: ozdobnik wchodzi w połowę odstępu, zamiast go podwajać */
+.dividerPull {
+  margin-block: calc(var(--section-gap) * -0.5);
+}
+.sectionDivider::before,
+.sectionDivider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+.sectionDivider::before {
+  background: linear-gradient(90deg, rgba(184, 142, 82, 0), rgba(184, 142, 82, 0.75));
+}
+.sectionDivider::after {
+  background: linear-gradient(90deg, rgba(184, 142, 82, 0.75), rgba(184, 142, 82, 0));
+}
+.dividerBeads {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.dividerBeads > span {
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px -2px rgba(110, 58, 22, 0.5);
+}
+.dividerBeads > span:nth-child(odd) {
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle at 34% 30%, #f6e2b5 0%, #d6b273 50%, #9a7442 100%);
+}
+.dividerBeads > span:nth-child(2) {
+  width: 11px;
+  height: 11px;
+  background: radial-gradient(circle at 36% 32%, #ffffff 0%, #f6ece4 40%, #e2cbbb 78%, #c9a993 100%);
+}

@@ -19,6 +19,16 @@
 .sm {
   width: clamp(170px, min(70vw, 42svh), 460px);
 }
+.nav {
+  width: clamp(112px, 12vw, 150px);
+}
+.footer {
+  width: clamp(170px, 20vw, 220px);
+}
+.nav .image,
+.footer .image {
+  filter: none;
+}
 
 /* Błysk w miejscu gwiazdki logo (≈ 93,6% szerokości, 11% wysokości) */
 .glint {

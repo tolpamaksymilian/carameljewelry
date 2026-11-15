@@ -1,0 +1,253 @@
+/* Wspólne elementy interfejsu pełnej strony: karty, pigułki, okrągłe przyciski, typografia sekcji */
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: clamp(0.66rem, 0.62rem + 0.2vw, 0.78rem);
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: var(--copper-deep);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif-stack);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 1.4rem + 3vw, 4.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--chocolate);
+  text-wrap: balance;
+}
+
+.title em,
+.accent {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--copper-deep);
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: var(--font-serif-stack);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.5rem);
+  line-height: 1.05;
+  color: var(--chocolate);
+  text-wrap: balance;
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-serif-stack);
+  font-size: clamp(1.05rem, 1rem + 0.25vw, 1.22rem);
+  line-height: 1.6;
+  color: var(--caramel-dark);
+  text-wrap: pretty;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius-card);
+  background: var(--card);
+  border: 1px solid var(--card-line);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.6s var(--ease-out), box-shadow 0.6s var(--ease-out);
+}
+
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ---------- Przyciski w kształcie pigułek ---------- */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 0.55em 1.6em;
+  border: 1px solid var(--chocolate);
+  border-radius: 999px;
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.35;
+  text-wrap: balance;
+  color: var(--cream);
+  background: var(--chocolate);
+  cursor: pointer;
+  transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+}
+.pill:hover,
+.pill:focus-visible {
+  background: var(--copper-deep);
+  border-color: var(--copper-deep);
+}
+
+.pillOutline {
+  color: var(--chocolate);
+  background: rgba(255, 252, 247, 0.6);
+  border-color: var(--hairline-strong);
+}
+.pillOutline:hover,
+.pillOutline:focus-visible {
+  color: var(--cream);
+  background: var(--chocolate);
+  border-color: var(--chocolate);
+}
+
+.pill svg {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  transition: transform 0.5s var(--ease-out);
+}
+.pill:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ---------- Okrągłe przyciski (↗, +, strzałki) ---------- */
+
+.round {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: var(--round, 48px);
+  height: var(--round, 48px);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 50%;
+  color: var(--chocolate);
+  background: rgba(255, 252, 247, 0.8);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out), border-color 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.round svg {
+  width: 42%;
+  height: 42%;
+}
+.round:hover,
+.round:focus-visible {
+  color: var(--cream);
+  background: var(--chocolate);
+  border-color: var(--chocolate);
+}
+.round:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.roundDark {
+  color: var(--cream);
+  background: var(--chocolate);
+  border-color: var(--chocolate);
+}
+.roundDark:hover,
+.roundDark:focus-visible {
+  background: var(--copper-deep);
+  border-color: var(--copper-deep);
+}
+
+/* Miedziana kula z ikoną - jak na stronie „już wkrótce” */
+.copperIcon {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: var(--round, 38px);
+  height: var(--round, 38px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #f6c78e 0%, #c47b3a 50%, #8b4a1e 100%);
+  color: #fffaf3;
+}
+.copperIcon svg {
+  width: 52%;
+  height: 52%;
+}
+
+/* ---------- Filtry ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter {
+  min-height: 44px;
+  padding: 0 1.15em;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--caramel-dark);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.4s var(--ease-out), color 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+}
+.filter:hover {
+  border-color: var(--copper);
+  color: var(--chocolate);
+}
+.filter[aria-pressed="true"] {
+  color: var(--cream);
+  background: var(--chocolate);
+  border-color: var(--chocolate);
+}
+
+/* ---------- Etykiety ---------- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 0.85em;
+  border-radius: 999px;
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--chocolate);
+  background: rgba(255, 252, 247, 0.92);
+  border: 1px solid var(--card-line);
+}
+.tagCopper {
+  color: #fffaf3;
+  background: var(--copper);
+  border-color: var(--copper);
+}
+
+/* ---------- Sekcje ---------- */
+
+.section {
+  width: min(100% - 2 * var(--gutter), var(--max-w));
+  margin-inline: auto;
+  margin-block: var(--section-gap);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans-stack);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: var(--caramel-dark);
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,29 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+.main {
+  flex: 1;
+  padding-top: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  background: var(--chocolate);
+  color: var(--cream);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.skip:focus {
+  top: 1rem;
+}

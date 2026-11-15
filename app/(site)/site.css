@@ -1,0 +1,78 @@
+/*
+ * Motyw pełnej strony (podgląd i podstrony). Działa tylko tam, gdzie jest [data-site],
+ * czyli w układzie app/(site)/layout.tsx - strona „/” (zapowiedź) zostaje bez zmian.
+ */
+
+/* ---------- Kolory marki ---------- */
+body:has([data-site]) {
+  --cream: rgb(246, 236, 224);
+  --gold: rgb(184, 142, 82);
+  --copper: rgb(170, 104, 52);
+  --chocolate: rgb(43, 27, 19);
+
+  /* role */
+  --bg: var(--cream);
+  --text: var(--chocolate);
+  --hairline: rgba(170, 104, 52, 0.32);
+  --hairline-strong: rgba(139, 74, 30, 0.45);
+  --card-line: rgba(170, 104, 52, 0.18);
+  /* drobny tekst i etykiety - ciemniejszy karmel (kontrast AA na kremie) */
+  --caramel: #8a5a3a;
+  /* złoty pierścień fokusu (ciemniejszy odcień złota - widoczny na kremie) */
+  --focus: #9a7442;
+
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- Fokus w kolorze złota ---------- */
+body:has([data-site]) :focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+body:has([data-site]) :focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* zaznaczenie tekstu w odcieniu złota */
+body:has([data-site]) ::selection {
+  background: rgba(184, 142, 82, 0.32);
+  color: var(--chocolate);
+}
+
+/* kotwice nie chowają się pod przyklejonym nagłówkiem */
+body:has([data-site]) :target {
+  scroll-margin-top: 104px;
+}
+
+/* cienki pasek przewijania w kolorach marki (komputer) */
+@media (pointer: fine) {
+  html:has([data-site]) {
+    scrollbar-color: rgba(170, 104, 52, 0.55) transparent;
+  }
+}
+
+/*
+ * Wejście treści na pierwszym ekranie: tekst jest widoczny od pierwszej klatki
+ * (lekko przygaszony, niżej i rozmyty), a potem „wyostrza się” na swoje miejsce.
+ * Dzięki temu główna treść maluje się od razu (LCP), a animacja zostaje.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  body:has([data-site]) .reveal {
+    opacity: 1;
+    animation: site-rise 1.2s var(--ease-out) both;
+    animation-delay: var(--delay, 0s);
+  }
+}
+@keyframes site-rise {
+  from {
+    opacity: 0.35;
+    transform: translateY(12px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}

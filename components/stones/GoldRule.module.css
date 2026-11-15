@@ -1,0 +1,26 @@
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(180px, 100%);
+}
+.center {
+  margin-inline: auto;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(199, 164, 107, 0), var(--gold) 60%, var(--gold));
+}
+.line:last-child {
+  background: linear-gradient(90deg, var(--gold), var(--gold) 40%, rgba(199, 164, 107, 0));
+}
+
+.diamond {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: radial-gradient(circle at 35% 30%, #f6e2b5, var(--gold) 55%, var(--gold-deep));
+}
