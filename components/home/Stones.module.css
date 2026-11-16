@@ -159,6 +159,37 @@
   text-align: center;
   overflow-wrap: anywhere;
   color: var(--copper-deep);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* numerologia, żywioł, planeta w szerokiej karcie */
+.mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  margin: 1.1rem 0 0;
+}
+.mini div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.mini dt {
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--caramel);
+}
+.mini dd {
+  margin: 0;
+  font-family: var(--font-serif-stack);
+  font-size: 1.02rem;
+  line-height: 1.25;
+  color: var(--chocolate);
 }
 
 /* szeroka karta - stała minimalna szerokość, przycinana przez kartę podczas rozsuwania */
@@ -313,8 +344,22 @@
     transform: none;
     text-align: start;
   }
+  .narrow {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.3rem;
+  }
   .narrowSign {
-    font-size: 0.62rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 0.55em;
+    font-size: 0.6rem;
+    text-align: start;
+  }
+  .narrowSign span + span::before {
+    content: "·";
+    margin-right: 0.55em;
   }
 
   .wide {

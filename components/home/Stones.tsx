@@ -7,14 +7,14 @@ import { BeadCorners, BeadRow, SparkleField } from "@/components/site/Ornaments"
 import { PhotoSlot } from "@/components/site/PhotoSlot";
 import ui from "@/components/site/ui.module.css";
 import { GoldRule } from "@/components/stones/GoldRule";
-import { ELEMENTS, nbsp, stoneHref, stonesByElement, type Element } from "@/lib/stones";
+import { getGroup, GROUPS, nbsp, stoneHref, stonesByGroup, type GroupId } from "@/lib/stones";
 import styles from "./Stones.module.css";
 
 /** „Odkryj moc kamieni” - dane z lib/stones.ts (to samo źródło co podstrony /moc-kamieni). */
 export function Stones() {
-  const [element, setElement] = useState<Element>("ogien");
+  const [grupa, setGrupa] = useState<GroupId>(GROUPS[0].id);
   const [active, setActive] = useState(0);
-  const list = stonesByElement(element);
+  const list = stonesByGroup(grupa);
 
   return (
     <section className={`${ui.section} ${styles.section}`} aria-labelledby="kamienie-title">
@@ -31,7 +31,7 @@ export function Stones() {
           <SparkleField items={[{ left: "84%", top: "70%", size: 14, d: 1.2 }]} />
           <p className={ui.eyebrow}>Moc kamieni</p>
           <p className={styles.introText}>
-            Każdy kamień ma swoje znaczenie i&nbsp;znak zodiaku. Zajrzyj i&nbsp;znajdź ten, który najbardziej do Ciebie pasuje.
+            Każdy kamień ma swoją symbolikę i&nbsp;znaki zodiaku. Wybierz, czego szukasz, albo znajdź kamień dla swojego znaku.
           </p>
           <Link href="/moc-kamieni" className={ui.pill}>
             Przejdź do Mocy kamieni
@@ -40,25 +40,25 @@ export function Stones() {
         </article>
 
         <div className={styles.browser} data-reveal style={{ "--reveal-delay": "0.12s" } as React.CSSProperties}>
-          <ul className={ui.filters} aria-label="Wybierz żywioł">
-            {ELEMENTS.map((el) => (
-              <li key={el.id}>
+          <ul className={ui.filters} aria-label="Czego szukasz?">
+            {GROUPS.map((g) => (
+              <li key={g.id}>
                 <button
                   type="button"
                   className={ui.filter}
-                  aria-pressed={element === el.id}
+                  aria-pressed={grupa === g.id}
                   onClick={() => {
-                    setElement(el.id);
+                    setGrupa(g.id);
                     setActive(0);
                   }}
                 >
-                  {el.label}
+                  {g.short}
                 </button>
               </li>
             ))}
           </ul>
 
-          <ul key={element} className={styles.cards} aria-label="Kamienie">
+          <ul key={grupa} className={styles.cards} aria-label="Kamienie">
             {list.map((s, i) => {
               const open = i === active;
               return (
@@ -78,18 +78,44 @@ export function Stones() {
                   >
                     <PhotoSlot label={s.name} src={s.image} alt="" fill sizes="(max-width: 900px) 100vw, 110px" className={styles.narrowPhoto} />
                     <span className={styles.narrowName}>{s.name}</span>
-                    <span className={styles.narrowSign}>{s.sign}</span>
+                    <span className={styles.narrowSign}>
+                      {s.zodiac.map((z) => (
+                        <span key={z}>{z}</span>
+                      ))}
+                    </span>
                   </button>
 
                   {/* szeroka (aktywna) karta */}
                   <article className={styles.wide} inert={!open} aria-hidden={!open}>
                     <div className={styles.wideBody}>
-                      <p className={styles.label}>{s.label}</p>
+                      <p className={styles.label}>{getGroup(s.group).title}</p>
                       <h3 className={styles.name}>{s.name}</h3>
                       <p className={styles.keywords}>{nbsp(s.keywords)}</p>
                       <GoldRule className={styles.rule} />
-                      <p className={styles.text}>{nbsp(s.description)}</p>
-                      <p className={styles.signNote}>{nbsp(s.signNote)}</p>
+                      <p className={styles.text}>{nbsp(s.description ?? s.intention ?? s.symbolism)}</p>
+                      {(s.element || s.planet || s.numerology) && (
+                        <dl className={styles.mini}>
+                          {s.numerology && (
+                            <div>
+                              <dt>Numerologia</dt>
+                              <dd>{s.numerology.n}</dd>
+                            </div>
+                          )}
+                          {s.element && (
+                            <div>
+                              <dt>Żywioł</dt>
+                              <dd>{s.element}</dd>
+                            </div>
+                          )}
+                          {s.planet && (
+                            <div>
+                              <dt>Planeta</dt>
+                              <dd>{s.planet}</dd>
+                            </div>
+                          )}
+                        </dl>
+                      )}
+                      <p className={styles.signNote}>Znaki zodiaku: {s.zodiac.join(", ")}</p>
                       <Link href={stoneHref(s.slug)} className={`${ui.round} ${ui.roundDark} ${styles.go}`} aria-label={`${s.name} - poznaj kamień`}>
                         <ArrowUpRightIcon />
                       </Link>

@@ -1,11 +1,146 @@
 .wrap {
+  scroll-margin-top: 104px;
   display: flex;
   flex-direction: column;
-  gap: clamp(1.2rem, 2.4vw, 2rem);
+  gap: clamp(1.4rem, 2.6vw, 2.2rem);
+}
+
+/* ---------- Przełącznik: Czego szukasz? / Twój znak ---------- */
+
+.modes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+  width: min(100%, 620px);
+  margin-inline: auto;
+  padding: 0.35rem;
+  border: 1px solid var(--card-line);
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.7);
+  box-shadow: var(--card-shadow);
+}
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.12rem;
+  min-height: 60px;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--chocolate);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out);
+}
+.mode:hover {
+  background: rgba(196, 140, 92, 0.12);
+}
+.mode[aria-pressed="true"] {
+  background: var(--chocolate);
+  color: var(--cream);
+}
+.modeTitle {
+  font-family: var(--font-serif-stack);
+  font-size: clamp(1.08rem, 1rem + 0.4vw, 1.3rem);
+  line-height: 1.15;
+}
+.modeHint {
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
 }
 
 .filters {
   justify-content: center;
+}
+
+/* ---------- Grupy ---------- */
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.2rem, 4.5vw, 3.6rem);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  animation: item-in 0.7s var(--ease-out) both;
+}
+
+.groupHead {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(0.8rem, 2vw, 1.5rem);
+  padding-bottom: clamp(0.7rem, 1.4vw, 1rem);
+  border-bottom: 1px solid var(--card-line);
+}
+
+.groupNr {
+  flex: none;
+  align-self: center;
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 1.6rem + 2vw, 3.4rem);
+  line-height: 0.85;
+  color: var(--copper);
+}
+
+.groupText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.groupTitle {
+  margin: 0;
+  font-family: var(--font-serif-stack);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+  line-height: 1.05;
+  color: var(--chocolate);
+  text-wrap: balance;
+}
+.groupTitle em {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.62em;
+  color: var(--copper-deep);
+  white-space: nowrap;
+}
+
+.groupLead {
+  margin: 0;
+  max-width: 52ch;
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  line-height: 1.45;
+  color: var(--caramel-dark);
+  text-wrap: pretty;
+}
+
+.groupCount {
+  flex: none;
+  padding-bottom: 0.2rem;
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  white-space: nowrap;
 }
 
 .grid {
@@ -22,6 +157,70 @@
   animation-delay: calc(var(--i, 0) * 45ms);
 }
 
+/* ---------- Znaki zodiaku ---------- */
+
+.signs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.45rem, 1vw, 0.7rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  width: 100%;
+  min-height: 64px;
+  padding: 0.6rem 0.4rem;
+  border: 1px solid var(--card-line);
+  border-radius: calc(var(--radius-card) - 6px);
+  background: var(--card);
+  color: var(--chocolate);
+  cursor: pointer;
+  transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out), border-color 0.5s var(--ease-out),
+    transform 0.5s var(--ease-out);
+}
+.sign:hover {
+  border-color: var(--copper);
+  transform: translateY(-2px);
+}
+.sign[aria-pressed="true"] {
+  background: var(--chocolate);
+  border-color: var(--chocolate);
+  color: var(--cream);
+}
+.signName {
+  font-family: var(--font-serif-stack);
+  font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.25rem);
+  line-height: 1.1;
+}
+.signDates {
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.hint {
+  margin: 0;
+  padding: clamp(1.4rem, 3vw, 2.2rem) 1rem;
+  border: 1px dashed var(--hairline-strong);
+  border-radius: var(--radius-card);
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--caramel-dark);
+  text-align: center;
+}
+
 @keyframes item-in {
   from {
     opacity: 0;
@@ -33,14 +232,57 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .group,
+  .item {
+    animation: none;
+  }
+}
+
 @media (max-width: 1100px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
+@media (max-width: 860px) {
+  .signs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .modes {
+    border-radius: calc(var(--radius-card) - 2px);
+  }
+  .mode {
+    border-radius: calc(var(--radius-card) - 6px);
+    min-height: 64px;
+    padding-inline: 0.5rem;
+  }
+  .modeHint {
+    font-size: 0.54rem;
+    letter-spacing: 0.1em;
+  }
+  .signs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .groupHead {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .groupNr {
+    font-size: 2rem;
+  }
+  .groupCount {
+    order: 3;
+    width: 100%;
+    padding: 0;
   }
 }

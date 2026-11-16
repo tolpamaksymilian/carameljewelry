@@ -140,7 +140,7 @@ export function kolekcjaKamieniLd(kamienie: Stone[], opis: string) {
   };
 }
 
-/** /moc-kamieni/[slug]: Article z istniejącego opisu kamienia. */
+/** /moc-kamieni/[slug]: Article z karty kamienia. */
 export function artykulKamieniaLd(s: Stone) {
   const url = adres(`/moc-kamieni/${s.slug}`);
   return {
@@ -148,8 +148,21 @@ export function artykulKamieniaLd(s: Stone) {
     "@type": "Article",
     "@id": `${url}#artykul`,
     headline: `${s.name} - znaczenie kamienia`,
-    description: s.description,
-    articleBody: `${s.description} ${s.signNote}`,
+    description: [s.symbolism, s.intention].filter(Boolean).join(" "),
+    articleBody: [
+      s.description,
+      `Symbolika: ${s.symbolism}`,
+      s.intention && `Intencja: ${s.intention}`,
+      `Znaki zodiaku: ${s.zodiac.join(", ")}.`,
+      s.element && `Żywioł: ${s.element}.`,
+      s.planet && `Planeta: ${s.planet}.`,
+      s.chakra && `Czakra: ${s.chakra}.`,
+      s.numerology && `Numerologia: ${s.numerology.n} - ${s.numerology.text}.`,
+      `Ciekawostka: ${s.fact}`,
+      `Pielęgnacja: ${s.care}`,
+    ]
+      .filter(Boolean)
+      .join(" "),
     keywords: s.keywords,
     image: pelny(s.image),
     url,

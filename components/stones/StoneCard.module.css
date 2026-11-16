@@ -56,3 +56,25 @@
   text-transform: uppercase;
   color: var(--caramel);
 }
+.signOn {
+  font-weight: 600;
+  color: var(--accent, var(--copper-deep));
+}
+.teaser {
+  margin-top: 0.35rem;
+  font-family: var(--font-serif-stack);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--caramel-dark);
+  text-wrap: pretty;
+}
+
+@media (max-width: 480px) {
+  .teaser {
+    font-size: 0.92rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+}
