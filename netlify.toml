@@ -15,6 +15,12 @@
 [functions]
   directory = "netlify/functions"
 
+# Dawny adres podglądu pełnej strony (przed startem) prowadzi na stronę główną.
+[[redirects]]
+  from = "/podglad"
+  to = "/"
+  status = 301
+
 # Strona 404:
 # Netlify automatycznie serwuje `out/404.html` ze statusem HTTP 404 dla każdego
 # nieistniejącego adresu. Celowo NIE ma tu przekierowania „/* -> /index.html”.

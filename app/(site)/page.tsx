@@ -14,15 +14,11 @@ export const metadata: Metadata = meta({
   title: "Caramel Jewelry - ręcznie robiona biżuteria z koralików",
   description:
     "Ręcznie robiona biżuteria z koralików i kamieni naturalnych: naszyjniki, bransoletki i zestawy. Każdy koralik nawlekam ręcznie - także na zamówienie.",
-  // docelowo to strona główna - adres kanoniczny wskazuje na „/”
   path: "/",
 });
 
-/**
- * Nowa strona główna (na razie pod /podglad). W dniu startu ten plik staje się stroną „/”
- * - instrukcja krok po kroku jest w START.md.
- */
-export default function PreviewHome() {
+/** Strona główna. */
+export default function HomePage() {
   return (
     <>
       <Hero wyrozniona={WYROZNIONA} praca={{ slug: WYROZNIONA_PRACA.slug, nazwa: WYROZNIONA_PRACA.nazwa }} blur={HERO_BLUR} />

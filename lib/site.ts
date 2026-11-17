@@ -1,18 +1,12 @@
 /**
- * Ustawienia startu strony i dane do SEO.
+ * Ustawienia strony i dane do SEO.
  *
- * SITE_PUBLIC = false (teraz):
- *   - /podglad i podstrony mają meta robots „noindex, nofollow”;
- *   - nie powstają sitemap.xml, robots.txt ani llms.txt;
- *   - strona „/” (zapowiedź) działa bez zmian.
- * SITE_PUBLIC = true (dzień startu):
- *   - podstrony stają się indeksowalne;
- *   - po `npm run build` powstają out/sitemap.xml, out/robots.txt i out/llms.txt
- *     (scripts/seo-pliki.mjs);
- *   - menu „Start” i logo prowadzą do „/” zamiast „/podglad”.
- * Pełna instrukcja startu: START.md w głównym folderze projektu.
+ * SITE_PUBLIC = true (strona publiczna od 2026-11-17):
+ *   - strony mają meta robots „index, follow” (panel /admin zawsze „noindex”);
+ *   - po `npm run build` powstają out/sitemap.xml, out/robots.txt i out/llms.txt (scripts/seo-pliki.mjs).
+ * `false` ukrywa stronę przed wyszukiwarkami (noindex, bez mapy strony).
  */
-export const SITE_PUBLIC = false;
+export const SITE_PUBLIC = true;
 
 /** Docelowy adres strony (canonical, Open Graph, dane strukturalne). */
 export const SITE_URL = "https://carameljewelry.pl";
@@ -26,8 +20,8 @@ export const SITE_NAME = "Caramel Jewelry";
  */
 export const POKAZ_PRACOWNIE = true;
 
-/** Adres strony głównej: do startu podgląd, po starcie „/”. */
-export const HOME_HREF = SITE_PUBLIC ? "/" : "/podglad";
+/** Adres strony głównej. */
+export const HOME_HREF = "/";
 
 /** Obraz Open Graph (1200x630). */
 export const OG_IMAGE = { url: `${SITE_URL}/og/caramel-jewelry-og.jpg`, width: 1200, height: 630, alt: "Caramel Jewelry - ręcznie robiona biżuteria z koralików" };

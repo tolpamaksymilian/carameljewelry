@@ -53,7 +53,7 @@ const GROUPS = [
     files: [
       f("b8319a9c-6680-44a2-b52a-e473bb6678fc.png", BEZ),
       // wcześniejsze zdjęcie Poziomki - oryginał leży w archiwum projektu
-      { abs: path.join(PUB, "_archiwum/zdjecia/prace/praca-01-poziomka.webp"), file: "praca-01-poziomka.webp", korekta: null },
+      { abs: path.join(ROOT, "_archiwum/zdjecia/prace/praca-01-poziomka.webp"), file: "praca-01-poziomka.webp", korekta: null },
     ],
   },
   {

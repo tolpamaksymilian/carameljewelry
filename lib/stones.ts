@@ -1,7 +1,7 @@
 import KAMIENIE_JSON from "./dane/kamienie.json";
 
 /**
- * Moc kamieni - jedno źródło danych dla strony głównej (/podglad) i podstron /moc-kamieni.
+ * Moc kamieni - jedno źródło danych dla strony głównej i podstron /moc-kamieni.
  * Treści kamieni edytuje się w panelu /admin (pierwotnie: dokument autorki „kamienie.docx” i dawne opisy).
  * Tu są tylko grupy, znaki zodiaku, źródła ciekawostek i funkcje pomocnicze.
  * Puste pola kamienia nie pojawiają się na stronie.

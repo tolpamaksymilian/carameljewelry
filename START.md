@@ -1,62 +1,27 @@
-# Start strony Caramel Jewelry - krok po kroku
+# Strona Caramel Jewelry - stan po starcie (2026-11-17)
 
-Do dnia startu pod adresem `/` działa zapowiedź („już wkrótce”), a pełna strona jest pod `/podglad`
-i ma ustawione `noindex, nofollow`. Poniżej wszystko, co trzeba zrobić, żeby pełna strona stała się publiczna.
+Pełna strona działa pod `/` i jest indeksowana (`SITE_PUBLIC = true` w `lib/site.ts`).
+Dawny adres podglądu `/podglad` przekierowuje na `/` (301, `netlify.toml`). Zapowiedź „już wkrótce” została usunięta
+(jest w historii gita).
 
-## 1. Przed startem - uzupełnij dane (opcjonalnie, ale warto)
+Treści (prace, zdjęcia, kamienie, teksty) zmienia się w panelu `/admin` - instrukcja: `PANEL.md`.
 
-- `lib/site.ts` → `GEO`: miasto, województwo, obszar dostaw, sposób wysyłki (teraz są tam TODO).
-- `lib/faq.ts`: dopisz pytania o cenę, wysyłkę, czas realizacji, płatność, zwroty, pielęgnację
-  - tylko jeśli znasz odpowiedzi.
-- `lib/prace.ts`: nazwy i opisy prac.
+## Po wdrożeniu - do zrobienia raz
 
-## 2. Przełącz stronę na publiczną
-
-1. W `lib/site.ts` zmień `SITE_PUBLIC = false` na `SITE_PUBLIC = true`.
-2. Podmień stronę główną:
-   - przenieś `app/page.tsx` i `app/page.module.css` (zapowiedź) do folderu `_archiwum/` w głównym
-     folderze projektu (albo usuń),
-   - przenieś `app/(site)/podglad/page.tsx` do `app/(site)/page.tsx`,
-   - usuń pusty folder `app/(site)/podglad/`.
-3. W `netlify.toml` dopisz przekierowanie starego adresu podglądu:
-
-   ```toml
-   [[redirects]]
-     from = "/podglad"
-     to = "/"
-     status = 301
-   ```
-
-Po zmianie flagi automatycznie:
-
-- podstrony dostają `index, follow` zamiast `noindex, nofollow`,
-- menu „Start” i logo prowadzą do `/`,
-- `npm run build` tworzy `out/sitemap.xml`, `out/robots.txt` i `out/llms.txt`.
-
-## 3. Zbuduj i sprawdź lokalnie
-
-```bash
-npm run build
-```
-
-Sprawdź, że w folderze `out/` są: `index.html` (pełna strona główna), `sitemap.xml`, `robots.txt`, `llms.txt`.
-Podgląd lokalny: `npm run start`.
-
-## 4. Wyślij na Netlify
-
-Zrób commit i push gałęzi w GitHub Desktop - Netlify zbuduje stronę sam (`npm run build`, folder `out`).
-
-## 5. Po wdrożeniu
-
-- Otwórz `https://carameljewelry.pl/`, `/pracownia`, `/moc-kamieni`, `/kontakt` i `/sitemap.xml`.
-- Dodaj domenę w Google Search Console i zgłoś mapę: `https://carameljewelry.pl/sitemap.xml`.
+- Otwórz `https://carameljewelry.pl/`, `/pracownia`, `/moc-kamieni`, `/kontakt`, `/sitemap.xml` i `/podglad`
+  (powinien przenieść na stronę główną).
+- Dodaj domenę w Google Search Console i zgłoś mapę strony: `https://carameljewelry.pl/sitemap.xml`.
 - Sprawdź podgląd linku (Open Graph), np. wklejając adres strony w wiadomości na Facebooku.
 - Uruchom PageSpeed Insights dla strony głównej.
 
+## Do uzupełnienia, gdy będą dane
+
+- `lib/site.ts` → `GEO`: miasto, województwo, obszar dostaw, sposób wysyłki.
+- Panel → Teksty → Kontakt: pytania o cenę, wysyłkę, czas realizacji, płatność, zwroty (dziś jest 6 pytań).
+
 ## Przydatne
 
-- Zdjęcia: `node scripts/zdjecia.mjs` (konwersja z folderu źródłowego, można uruchamiać wielokrotnie).
-- Sekcję „Jak pracuję” ze zdjęciami pracowni wyłącza `POKAZ_PRACOWNIE = false` w `lib/site.ts`.
-- Korektę zdjęć (jasność, ostrość) wyłącza `KOREKTA = false` w `scripts/zdjecia.mjs`.
-- Folder `public/_archiwum/` zawiera stare, nieużywane zdjęcia. Jest w `public/`, więc trafia też na serwer
-  (bez linków i z blokadą w `robots.txt`). Przed startem możesz go przenieść poza `public/`.
+- Zdjęcia dekoracyjne (hero, pasek Instagrama, pracownia): `node scripts/zdjecia.mjs` (z folderu źródłowego).
+- Sekcję „Jak pracuję” wyłącza `POKAZ_PRACOWNIE = false` w `lib/site.ts`.
+- Ukrycie strony przed wyszukiwarkami: `SITE_PUBLIC = false` (noindex, bez mapy strony).
+- Stare, nieużywane zdjęcia są w `_archiwum/` (poza `public/`, nie trafiają na serwer).

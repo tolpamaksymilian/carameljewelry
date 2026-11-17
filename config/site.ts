@@ -7,11 +7,10 @@ import { HOME_HREF, SITE_PUBLIC } from "@/lib/site";
 export const siteConfig = {
   name: "Caramel Handmade Jewelry",
   shortName: "Caramel",
-  // do startu: teksty zapowiedzi („/”); po starcie (SITE_PUBLIC = true): domyślne teksty pełnej strony, np. dla 404
-  title: SITE_PUBLIC ? "Caramel Jewelry - ręcznie robiona biżuteria z koralików" : "Caramel Handmade Jewelry | Wkrótce",
-  description: SITE_PUBLIC
-    ? "Ręcznie robiona biżuteria z koralików i kamieni naturalnych: naszyjniki, bransoletki i zestawy. Każdy koralik nawlekam ręcznie."
-    : "Caramel Handmade Jewelry – wyjątkowa biżuteria handmade. Nasza strona internetowa już wkrótce.",
+  // domyślne teksty (np. strona 404) - podstrony mają własne tytuły i opisy
+  title: "Caramel Jewelry - ręcznie robiona biżuteria z koralików",
+  description:
+    "Ręcznie robiona biżuteria z koralików i kamieni naturalnych: naszyjniki, bransoletki i zestawy. Każdy koralik nawlekam ręcznie.",
   locale: "pl_PL",
   lang: "pl",
 
@@ -40,10 +39,7 @@ export const siteConfig = {
   /** Domena wyświetlana w stopce. */
   domain: "carameljewelry.pl",
 
-  /**
-   * Adres strony głównej w menu. Na czas podglądu nowa strona główna
-   * działa pod /podglad; po starcie (SITE_PUBLIC = true w lib/site.ts) jest to "/".
-   */
+  /** Adres strony głównej w menu i w logo. */
   homeHref: HOME_HREF,
 } as const;
 

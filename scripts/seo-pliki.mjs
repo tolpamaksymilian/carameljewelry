@@ -38,7 +38,7 @@ if (!PUBLIC) {
 if (!URL_BASE) throw new Error("seo-pliki: nie znalazłem SITE_URL w lib/site.ts");
 
 /** Strony, których nie zgłaszam wyszukiwarkom. */
-const POMIN = new Set(["/404", "/_not-found", "/podglad", "/admin"]);
+const POMIN = new Set(["/404", "/_not-found", "/admin"]);
 
 function strony(dir = OUT, prefix = "") {
   const out = [];
@@ -72,7 +72,7 @@ fs.writeFileSync(
 // ---------- robots.txt ----------
 fs.writeFileSync(
   path.join(OUT, "robots.txt"),
-  ["User-agent: *", "Allow: /", "Disallow: /_archiwum/", "Disallow: /podglad", "Disallow: /admin", "", `Sitemap: ${URL_BASE}/sitemap.xml`, ""].join("\n"),
+  ["User-agent: *", "Allow: /", "Disallow: /admin", "", `Sitemap: ${URL_BASE}/sitemap.xml`, ""].join("\n"),
 );
 
 // ---------- llms.txt ----------
