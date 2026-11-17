@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { KLIMAT, PRACOWNIA, PRACE } from "@/lib/prace";
 import { listaPracLd, meta, okruszkiLd } from "@/lib/seo";
 import { POKAZ_PRACOWNIE } from "@/lib/site";
+import { rich, t } from "@/lib/teksty";
 import styles from "./pracownia.module.css";
 
 export const metadata: Metadata = meta({
@@ -23,26 +24,26 @@ export const metadata: Metadata = meta({
 const KROKI = [
   {
     nr: "01",
-    tytul: "Dobieram kolory",
-    tekst: "Zaczynam od koralików i kamieni. Układam je obok siebie tak długo, aż kolory zaczną do siebie pasować.",
+    tytul: t("pracownia.krok1.tytul"),
+    tekst: t("pracownia.krok1.tekst"),
     zdjecie: PRACOWNIA.uklad,
   },
   {
     nr: "02",
-    tytul: "Nawlekam ręcznie",
-    tekst: "Każdy koralik nawlekam ręcznie, jeden po drugim. Nic tu nie powstaje masowo.",
+    tytul: t("pracownia.krok2.tytul"),
+    tekst: t("pracownia.krok2.tekst"),
     zdjecie: PRACOWNIA.nawlekanie,
   },
   {
     nr: "03",
-    tytul: "Dopracowuję detale",
-    tekst: "Dopinam zapięcia i sprawdzam każdy detal, zanim praca opuści moje biurko.",
+    tytul: t("pracownia.krok3.tytul"),
+    tekst: t("pracownia.krok3.tekst"),
     zdjecie: PRACOWNIA.zapiecia,
   },
   {
     nr: "04",
-    tytul: "Pakuję z troską",
-    tekst: "Gotową biżuterię pakuję w papierowe torebki z logo Caramel.",
+    tytul: t("pracownia.krok4.tytul"),
+    tekst: t("pracownia.krok4.tekst"),
     zdjecie: PRACOWNIA.pakowanie,
   },
 ];
@@ -56,15 +57,12 @@ export default function StudioPage() {
           Moja pracownia
         </p>
         <h1 className={`${ui.title} ${styles.title} reveal`} style={{ "--delay": "0.15s" } as React.CSSProperties}>
-          Tu powstaje <span className={styles.pillWord}>Twoja</span> biżuteria
+          {rich("pracownia.tytul", styles.pillWord)}
         </h1>
         <BeadRow className={`${styles.beads} reveal`} />
         <p className={`${ui.text} ${styles.lead} reveal`} style={{ "--delay": "0.3s" } as React.CSSProperties}>
           {POKAZ_PRACOWNIE ? (
-            <>
-              W&nbsp;mojej pracowni dobieram kolory, nawlekam każdy koralik i&nbsp;pakuję gotowe prace. Zobacz, jak pracuję,
-              i&nbsp;obejrzyj wszystkie moje naszyjniki i&nbsp;bransoletki.
-            </>
+            t("pracownia.wstep")
           ) : (
             <>
               Każdy koralik nawlekam ręcznie. Obejrzyj wszystkie moje naszyjniki, bransoletki i&nbsp;zestawy&nbsp;- każdą pracę
@@ -90,7 +88,7 @@ export default function StudioPage() {
           <section className={styles.mosaic} aria-label="Moja pracownia na zdjęciach" data-reveal>
             <figure className={`${styles.tile} ${styles.tileWide}`}>
               <Foto zdjecie={PRACOWNIA.biurko} ratio="4 / 3" sizes="(max-width: 820px) 100vw, 640px" priority />
-              <figcaption className={styles.caption}>Moje biurko - tu powstaje każda praca</figcaption>
+              <figcaption className={styles.caption}>{t("pracownia.biurko.podpis")}</figcaption>
             </figure>
             <figure className={styles.tile}>
               <Foto zdjecie={PRACOWNIA.narzedzia} ratio="3 / 4" sizes="(max-width: 820px) 50vw, 320px" />
@@ -145,12 +143,9 @@ export default function StudioPage() {
         <div className={styles.everydayText}>
           <p className={ui.eyebrow}>Na co dzień</p>
           <h2 id="na-co-dzien-title" className={ui.title}>
-            Biżuteria, która <em>jest z&nbsp;Tobą</em>
+            {rich("pracownia.na_co_dzien.tytul")}
           </h2>
-          <p className={ui.text}>
-            Przy porannej kawie i&nbsp;w&nbsp;towarzystwie kota&nbsp;- moje bransoletki najlepiej wyglądają w&nbsp;codziennych
-            chwilach.
-          </p>
+          <p className={ui.text}>{t("pracownia.na_co_dzien.tekst")}</p>
         </div>
         <ul className={styles.everydayPhotos}>
           {KLIMAT.map((z) => (
@@ -164,9 +159,9 @@ export default function StudioPage() {
       {/* ---------- Kontakt ---------- */}
       <section className={styles.cta} aria-labelledby="cta-title" data-reveal>
         <h2 id="cta-title" className={styles.ctaTitle}>
-          Podoba Ci się któraś praca? <em>Napisz do mnie</em>
+          {rich("pracownia.cta.tytul")}
         </h2>
-        <p className={ui.text}>Zapytaj o&nbsp;dostępność albo o&nbsp;biżuterię zrobioną specjalnie dla Ciebie.</p>
+        <p className={ui.text}>{t("pracownia.cta.tekst")}</p>
         <div className={styles.headLinks}>
           <Link href="/kontakt" className={ui.pill}>
             Napisz do mnie

@@ -35,3 +35,7 @@ desktop.ini
 
 # narzędzia edytora / AI
 .impeccable
+
+# zdjęcia z Supabase (generuje scripts/dane.mjs przy dev/build)
+/public/zdjecia/p/
+/public/zdjecia/k/

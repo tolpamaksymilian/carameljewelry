@@ -197,6 +197,11 @@
   --round: 44px;
 }
 
+/* przyciski pod zdjęciem - tylko na telefonie */
+.ctasBelow {
+  display: none;
+}
+
 /* ---------- Karty po prawej ---------- */
 
 /* Komputer: obie karty w jednym rzędzie w prawym dolnym rogu - nie zasłaniają biżuterii na zdjęciu */
@@ -393,10 +398,9 @@
     min-height: clamp(400px, 66svh, 540px);
     padding-top: 0.5rem;
   }
+  /* telefon: przyciski nie leżą na zdjęciu - pokazuję je pod nim (.ctasBelow) */
   .ctas {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+    display: none;
   }
   .slider {
     width: 100%;
@@ -404,6 +408,77 @@
   }
   .side {
     grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 720px) {
+  /* Telefon: zdjęcie z tekstem to osobna karta, a boksy (wyróżniona praca, „zaprojektujmy razem”)
+     stoją pod nią - nie zasłaniają biżuterii na zdjęciu */
+  .hero {
+    padding: 0;
+    gap: 0.7rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    background: none;
+  }
+  .media,
+  .veil {
+    grid-area: 1 / 1;
+    position: relative;
+    inset: auto;
+  }
+  .media {
+    border-radius: calc(var(--radius-card) + 4px);
+    border: 1px solid var(--card-line);
+    box-shadow: var(--card-shadow);
+  }
+  .veil {
+    border-radius: calc(var(--radius-card) + 4px);
+    overflow: hidden;
+  }
+  .content {
+    grid-area: 1 / 1;
+    padding: 1.4rem 1rem 1rem;
+  }
+  .side {
+    grid-row: 2;
+  }
+  /* drugi przycisk leży już na zdjęciu - dostaje własne, półprzezroczyste tło */
+  .ctas a:last-child {
+    background: rgba(255, 250, 244, 0.82);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .dark .ctas a:last-child {
+    background: rgba(38, 22, 16, 0.6);
+  }
+  /* miedziane rogi i iskierki należą do karty ze zdjęciem - na telefonie bez nich */
+  .hero > span[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* Telefon: przyciski pod kartą ze zdjęciem, boksy pod nimi (po regułach do 720 px, żeby je nadpisać) */
+@media (max-width: 600px) {
+  .ctasBelow {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  .ctasBelow > a {
+    min-height: 50px;
+    padding-inline: 0.6em;
+    gap: 0.45em;
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-align: center;
+  }
+  .side {
+    grid-row: 3;
   }
 }
 

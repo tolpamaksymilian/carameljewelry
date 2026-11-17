@@ -3,8 +3,7 @@ import { BeadDivider } from "@/components/BeadDivider";
 import { SiteLogo } from "./SiteLogo";
 import { FacebookIcon, GlobeIcon, InstagramIcon } from "@/components/icons";
 import { navItems, siteConfig } from "@/config/site";
-import { O_MNIE } from "@/lib/site";
-import { nbsp } from "@/lib/typografia";
+import { t } from "@/lib/teksty";
 import { BeadCorners } from "./Ornaments";
 import ui from "./ui.module.css";
 import styles from "./SiteFooter.module.css";
@@ -48,7 +47,7 @@ export function SiteFooter() {
             <SiteLogo size="footer" />
           </Link>
           {/* krótko i rzeczowo: kim jestem i co robię (ten sam opis trafia do danych strukturalnych) */}
-          <p className={styles.about}>{nbsp(O_MNIE)}</p>
+          <p className={styles.about}>{t("wspolne.o_mnie")}</p>
         </div>
 
         <nav className={styles.col} aria-label="Menu w stopce">

@@ -6,6 +6,7 @@ import { BeadCorners, BeadRow, SectionDivider, SparkleField } from "@/components
 import ui from "@/components/site/ui.module.css";
 import { siteConfig } from "@/config/site";
 import { FAQ } from "@/lib/faq";
+import { rich, t } from "@/lib/teksty";
 import { faqLd, meta, okruszkiLd } from "@/lib/seo";
 import styles from "./kontakt.module.css";
 
@@ -23,7 +24,7 @@ const CHANNELS = [
     handle: siteConfig.social.instagramHandle,
     href: siteConfig.social.instagram,
     icon: <InstagramIcon />,
-    text: "Tu pokazuję nowe prace i kulisy mojej pracowni. Napisz do mnie w wiadomości prywatnej.",
+    text: t("kontakt.instagram.tekst"),
     cta: "Napisz na Instagramie",
   },
   {
@@ -32,7 +33,7 @@ const CHANNELS = [
     handle: siteConfig.social.facebookName,
     href: siteConfig.social.facebook,
     icon: <FacebookIcon />,
-    text: "Wolisz Messengera? Napisz do mnie na Facebooku.",
+    text: t("kontakt.facebook.tekst"),
     cta: "Napisz na Facebooku",
   },
 ];
@@ -55,8 +56,7 @@ export default function ContactPage() {
         </h1>
         <BeadRow className={`${styles.beads} reveal`} />
         <p className={`${ui.text} ${styles.lead} reveal`} style={{ "--delay": "0.3s" } as React.CSSProperties}>
-          Najłatwiej złapiesz mnie na Instagramie lub Facebooku. Napisz wiadomość, a&nbsp;razem znajdziemy biżuterię, która
-          będzie naprawdę Twoja.
+          {t("kontakt.wstep")}
         </p>
       </header>
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
       <section className={`${ui.card} ${styles.topics}`} aria-labelledby="o-co-zapytac" data-reveal>
         <SparkleField items={[{ left: "94%", top: "30%", size: 13, d: 1.1 }]} />
         <h2 id="o-co-zapytac" className={styles.topicsTitle}>
-          W&nbsp;wiadomości możesz zapytać <em>na przykład o:</em>
+          {rich("kontakt.tematy.tytul")}
         </h2>
         <ul className={styles.topicList}>
           {TOPICS.map((t) => (

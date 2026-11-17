@@ -72,17 +72,15 @@
 
 .photos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 0.6rem;
+  /* stała siatka 4 kolumn - wszystkie prace mają kadry tej samej wielkości */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
   margin: 0;
   padding: 0;
   list-style: none;
   align-content: start;
 }
-/* jedno zdjęcie - nie rozciągam go na całą szerokość */
-.single {
-  grid-template-columns: minmax(0, 260px);
-}
+
 
 .open {
   display: block;

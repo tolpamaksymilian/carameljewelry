@@ -1,0 +1,1575 @@
+[
+ {
+  "slug": "poziomka",
+  "nazwa": "Poziomka",
+  "typ": "naszyjnik",
+  "opis": "Perełki i czerwone poziomki - naszyjnik, który pachnie latem.",
+  "alt": "Naszyjnik Poziomka z perełek z zawieszkami w kształcie truskawek",
+  "naGlownej": true,
+  "kolejnoscGlowna": 2,
+  "wyrozniona": true,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/poziomka/01",
+    "alt": null,
+    "pozycja": "45% 50%",
+    "w": 1254,
+    "h": 1254,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 480
+     },
+     {
+      "dluzszy": 800,
+      "w": 800
+     },
+     {
+      "dluzszy": 1200,
+      "w": 1200
+     },
+     {
+      "dluzszy": 1254,
+      "w": 1254
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABwAgCdASoQABAAA4BaJZgCdIExgrCKKjEJNBYAAP7IoGSHVmmIBguZGjRMTtiZcBN7zYykzZW3cgOShXLnsMysAF/p31ipRPfNxzmhXGCcRQSVgDGCUMT/B+9wMIjYOP1i8zbpuu9EAmNjAYx8qKUuVwAAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/poziomka/02",
+    "alt": "Naszyjnik Poziomka - zbliżenie perełek i zawieszek-truskawek",
+    "pozycja": null,
+    "w": 1200,
+    "h": 1500,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 384
+     },
+     {
+      "dluzszy": 800,
+      "w": 640
+     },
+     {
+      "dluzszy": 1200,
+      "w": 960
+     },
+     {
+      "dluzszy": 1500,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwAgCdASoNABAAA4BaJbACdAafFn15M4qRJx4AAOI1PsvVZ7k4JpuN1rhKPsYsJ+LqbA3tJGXAvBd8xgQ7b4n5Asuu7RfmroeH18lgDJNV2trNgpVaYyadr2EIlfcn8gVx4qnCzqWqpkYGOXwiCMyaivpyVs0pWiR/5wAA"
+   }
+  ]
+ },
+ {
+  "slug": "czern-i-perla",
+  "nazwa": "Czerń i perła",
+  "typ": "zestaw",
+  "opis": "Klasyka w moim wydaniu - czerń i perła, które pasują do wszystkiego.",
+  "alt": "Czarno-perłowy naszyjnik i bransoletka ręcznie robione",
+  "naGlownej": true,
+  "kolejnoscGlowna": 1,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/czern-i-perla/01",
+    "alt": null,
+    "pozycja": "50% 20%",
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoMABAAA4BaJbACdAEfUfn26oFgAP7sf7P/DA9xYPGA//eZZMRKpCa9XDv8442C+f4B1t/1Dd3Wz4wFEeNloGl4GF9CfY6YqmsDybin7/SFaL0ryQAAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/czern-i-perla/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoMABAAA4BaJbACdAELT0ISn/AA/vQvGXRrtxxVnlwcu/F+FSYdBjnCdD3Igt6AYo9J3dhdYHgEM8wuB67zS4AA"
+   },
+   {
+    "baza": "/zdjecia/p/czern-i-perla/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoMABAAA4BaJZgCdAED4Vj5zIAA/vR9Z7QwdmXsmm+JL1a7xVdiOhQpOSxmPdLa6ukV+P5Pw8mCcE5GI0oCbSlgAAA="
+   },
+   {
+    "baza": "/zdjecia/p/czern-i-perla/04",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoMABAAA4BaJbACdLoAEJSSTY439mAA/i4KjUKHhBG83u5k/0ARPy3HUir/C+hZ8mXqBzLGLaQANM1oZNXuXKP0BLVKODlCMtSh9Ie73QXzwZ5HzX9HmElNgyb+xih/eLEAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/czern-i-perla/05",
+    "alt": null,
+    "pozycja": "50% 15%",
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoMABAAA4BaJbACdAYulvgoAAAA/umK74PGUdWn07MlFWFdru21IbRGxQUivaYkHwc5eTchMsihUm8TVyKVFitLo1qWjiuZ1SJI840z17Jj1h9Zn0mAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/czern-i-perla/06",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoMABAAA4BaJbACdAEPA42dvAAA/u8SiqyzePCK5gKLJfXxrYyOOyxgI++Ld2oU8GVcFci06vK92Sn1fHP35w1Re6TcaQAA"
+   },
+   {
+    "baza": "/zdjecia/p/czern-i-perla/07",
+    "alt": null,
+    "pozycja": "50% 15%",
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoMABAAA4BaJbACdAD0tRkPvWAA/uNiEJwI1Z6fRhGWRkuWju8PesDpi+XKdq85ZWUKceqixhsbGdmbvUCzjpUDkOzjiZwGSiPvmZfUuLCIkFaHvyuvfdm1IMlRAAAA"
+   }
+  ]
+ },
+ {
+  "slug": "skorpion",
+  "nazwa": "Skorpion",
+  "typ": "zestaw",
+  "opis": "Znak zodiaku zamknięty w medalionie.",
+  "alt": "Naszyjnik i bransoletka ze srebrnym medalionem ze znakiem Skorpiona",
+  "naGlownej": true,
+  "kolejnoscGlowna": 8,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/skorpion/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoMABAAA4BaJaACdADbIXV0oAD+7MQ+wgewyzouz9uHKeoMmUd8gjHS6koLAtkAHpNT8O3NkRR3ZrC9UQAAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/skorpion/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoMABAAA4BaJZgCdAEPDpwZAmK/wAD+y8gdtLYqIgidrQot/zjZ/Y/UkNjbDxlIMqd57copts/7zbkWmE+6T9T24AA="
+   }
+  ]
+ },
+ {
+  "slug": "kolory-natury",
+  "nazwa": "Kolory natury",
+  "typ": "bransoletka",
+  "typEtykieta": "Kolekcja bransoletek",
+  "opis": "Zielenie, róże i brązy - bransoletki, które łatwo łączyć ze sobą.",
+  "alt": "Bransoletki z koralików w kolorach zieleni, różu i brązu",
+  "naGlownej": true,
+  "kolejnoscGlowna": 5,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/kolory-natury/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoMABAAA4BaJbACdAEVYhyY1X8bwAD+0rWodbLk6HGmRCxCeAw/AnBHqAaP0Zg9giYy+VTNKHohhUZkovvq4YJ9GnrS2yIPSxRX7AAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoMABAAA4BaJbACdAELYIyHqf74AAD+7udiZVMVFlkuZrA5PlgB8jvkg/+8j6/4q314v58Hkq14IWNndhtwaBcidu7/SEtmDs9gAA=="
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoMABAAA4BaJbACdADcQArGsmdgAPwsJvyMpTMNcrr4qdvm3TFQ7gzzzqvLsDubDlsl0bYTXuE8VPVu3NW5BYTgHB12QYnoYD16M/cpRqfL5HPk2/PUsAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/04",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoMABAAA4BaJbACdAEfB+kURDAAAP7qTiovzQRbqX3Mvv+9IrZhwxsu0UHmt85ry8AWhLoq31KsPSnu7c2PsOTdeuLMCZ+5GwYgAA=="
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/05",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoMABAAA4BaJbACdAELY9GuaAAA/vNYyVhUb8KfY2zRWud5xZSrwEEGnCLPmDIBoPDY9xvutaAIkdgHW2Euci1LvvYwV7HlgAA="
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/06",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoMABAAA4BaJaACdAEf3OXqsAdAAP712ja8pkkE423PdmDbaq11u0D1R9kaia0haNveoSpjfdJ+tW6wAAA="
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/07",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoMABAAA4BaJbACdAEPDxQganMwAP7vFsR0rAfS/nQqXVanVRl12SNl0M0X3rKCiHD87DW1fOItnnDbhQn/eAsPxOUPJiBp+8ZJAAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/08",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoMABAAA4BaJbACdADdgYMUsAAA/mq1uaBS3vZUoAT7kWFTgOMtCzAY4u0ovh6DgZ/AwEM4p4OMxAIw2j6EGvgsFRhP1lh/EtomfYL0QpoDw5Hd+GfjoAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/09",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoMABAAA4BaJbACdAERF0R/oDgAAP71gRi/ay27k2qtao0svH1r0Lw523i6Lef9/6A248f/BDelw9SXTxPK1PAmfuVICqgA"
+   },
+   {
+    "baza": "/zdjecia/p/kolory-natury/10",
+    "alt": null,
+    "pozycja": "50% 70%",
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoMABAAA4BaJQBOgA3NUgKAAP7wgCSP2x7uDGGK4cPqLOeiyd2zC3OzD1iO28tuzL1DqjlGWg2BJOcRsAAAAA=="
+   }
+  ]
+ },
+ {
+  "slug": "kolorowy-polksiezyc",
+  "nazwa": "Kolorowy półksiężyc",
+  "typ": "zestaw",
+  "opis": "Kolorowe koraliki i złoty półksiężyc - na co dzień i od święta.",
+  "alt": "Kolorowy naszyjnik z półksiężycem i bransoletka",
+  "naGlownej": true,
+  "kolejnoscGlowna": 3,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/kolorowy-polksiezyc/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoMABAAA4BaJbACdAEO9U5qH+AA/veAiX4noHXJw500+so6Ud65vq5+HYewetsJc8nqjQx0RbYakAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolorowy-polksiezyc/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAgCdASoMABAAA4BaJbACdLoAAv4NPHIzLVBAAP7zLzIloTTlV8qqPKTjR4UtHlF6gKxFwVWFUfQ1YNGA8UaX3dbR/H350v3ZgAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolorowy-polksiezyc/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoMABAAA4BaJaACdAEOjsx86oAA/vaINAt4YYlo1SL7fIop0DkC++9kVgMi2tgnBPIcjgSVqvwAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/kolorowy-polksiezyc/04",
+    "alt": null,
+    "pozycja": "50% 45%",
+    "w": 720,
+    "h": 1280,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 270
+     },
+     {
+      "dluzszy": 800,
+      "w": 450
+     },
+     {
+      "dluzszy": 1200,
+      "w": 675
+     },
+     {
+      "dluzszy": 1280,
+      "w": 720
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAgCdASoJABAAA4BaJbACdLoAAzeXwmXZg5gAAP6EDKC8GzXkNVf2oYfNnCueECqZdaT4dhkLp1y74GuX1/dxinMO6pTGQtPKQyH86WY5VLT9EXyWKcAA"
+   }
+  ]
+ },
+ {
+  "slug": "blisko-serca",
+  "nazwa": "Blisko serca",
+  "typ": "naszyjnik",
+  "opis": "Delikatny róż i medalik, który nosi się blisko serca.",
+  "alt": "Naszyjnik z różowych koralików ze złotym medalikiem z Maryją",
+  "naGlownej": true,
+  "kolejnoscGlowna": 6,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/blisko-serca/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoMABAAA4BaJbACdAEO9Y92+pMAAP73gIWTquP/0BAIEVPaWGFmNxmLResXHN6IR+2MsYd30jXC/RB0UQAAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/blisko-serca/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAgCdASoMABAAA4BaJbACdLoAAzpUCYNxWhQAAP70tpPveG4BvI6+voxeRcUPvUWGPw/1vkPC7eZEHaH7Tf8iZdmfPFfVN99SRgAA"
+   },
+   {
+    "baza": "/zdjecia/p/blisko-serca/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoMABAAA4BaJaACdAEO4Rc3PAAA/vV1NghhCa3wswVgX1OfsS+TIAS11k5BG6cB+aF+TXj7W0Mc9WzmQAA="
+   }
+  ]
+ },
+ {
+  "slug": "dalmatynskie-serce",
+  "nazwa": "Dalmatyńskie serce",
+  "typ": "naszyjnik",
+  "opis": "Perełki, róż i serce z jaspisu dalmatyńskiego - słodko, ale z charakterem.",
+  "alt": "Naszyjnik z perełek z zawieszką-sercem z jaspisu dalmatyńskiego",
+  "naGlownej": true,
+  "kolejnoscGlowna": 4,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/dalmatynskie-serce/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoMABAAA4BaJZgCdAEPC2yBEAAA/vavdmRJC1HQBg3DvlvXV8Ejja0oBRsUYYlfw4HETClhgnCMYX9wv0QaXaAA"
+   },
+   {
+    "baza": "/zdjecia/p/dalmatynskie-serce/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoMABAAA4BaJZACdB2gAm3228fhAAD+8rYNrdVpMg9PrrqLts6GIilR1L3kilZyiMpELasScKWDZ+ZqSoiJjm2Y1mYInghCnFF1O98MgH5lbvwA"
+   },
+   {
+    "baza": "/zdjecia/p/dalmatynskie-serce/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoMABAAA4BaJbACdLoAAwz60UAgAP7qQzcW3SqA2YZAVe3YNh5FAHnTRQUuhAjnL0BozFfp4s35OKqaTr/fNTSF461JAkmA1zy9WEvYkqYlEZqguMh8fkxrfZWDiUAA"
+   }
+  ]
+ },
+ {
+  "slug": "czarny-polksiezyc",
+  "nazwa": "Czarny półksiężyc",
+  "typ": "naszyjnik",
+  "opis": "Czerń i złoto - minimalistycznie, z księżycem na środku.",
+  "alt": "Czarny naszyjnik z koralików ze złotym półksiężycem",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/czarny-polksiezyc/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoMABAAA4BaJbACdLoAAzs480WNnoAA/tBeQ496ZhZArmx8f1Z3vqIfhMMmOlC+ADwVRAaiE9wVJO7yKu5igMdGSLIQFn/icvWk2hrvyl/vHkRZmWlAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/czarny-polksiezyc/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoMABAAA4BaJbACdLoAAmsFhbAA/ndqI+bDnELiscA7qxFwTtcObsswmOYbaNBJNRjcPu2bZeO8QTurVgO+6aElVNlwKEgf/rZZWVPv2oiSNYoAAAA="
+   },
+   {
+    "baza": "/zdjecia/p/czarny-polksiezyc/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQAgCdASoMABAAA4BaJQBOgMWq33ffWlazQeAA/u+TJWhmYU0yRsAOQu2G+tRYLixJeg+L+GBaV3BPP1GwZa6v9SfBe1Vb45MZpj9vPZiVRybEleoIcNZ88FhOrcKI1s55RAW4AAA="
+   }
+  ]
+ },
+ {
+  "slug": "serce-i-kluczyk",
+  "nazwa": "Serce i kluczyk",
+  "typ": "naszyjnik",
+  "opis": "Serduszko i kluczyk - mały sekret w biżuterii.",
+  "alt": "Naszyjnik z czarnym serduszkiem i złotym kluczykiem",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/serce-i-kluczyk/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoMABAAA4BaJbACdLoAAuZkHhYfQAD+fqgDNNlE727LjFlfpE5qXhyabIL3xLcYaxw9q7x9UqyRPpjtbMtjWyXs8b6Fn6E2PZ4PxPF26CAAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/serce-i-kluczyk/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoMABAAA4BaJbACdLoAArmxbblVIAD+zFj5hOs6hfrp8df8PH9WZMVXv1y1MnUxZrjiaEaxCPUPyUlekeWeJe9WL/RUYLCcSn9zlg/s7VgAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/serce-i-kluczyk/03",
+    "alt": null,
+    "pozycja": "50% 60%",
+    "w": 720,
+    "h": 1280,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 270
+     },
+     {
+      "dluzszy": 800,
+      "w": 450
+     },
+     {
+      "dluzszy": 1200,
+      "w": 675
+     },
+     {
+      "dluzszy": 1280,
+      "w": 720
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAQCdASoJABAAA4BaJagCdADVzkIAAP7p/UD35mtJuFWImI5yCPR9iln7+vhDdu5Ss/r7ka/G71KwhuwQAAAA"
+   },
+   {
+    "baza": "/zdjecia/p/serce-i-kluczyk/04",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoMABAAA4BaJbACdLoAAwdracAA/u8sFQZtZ20oGlp+ZN5ORFsdUiSecVmf+FqgN8NlE5EpVn2NykwYCGfuSr/FEAAAAA=="
+   }
+  ]
+ },
+ {
+  "slug": "kolorowy-medalion",
+  "nazwa": "Kolorowy medalion",
+  "typ": "zestaw",
+  "opis": "Dużo koloru i złote detale - zestaw na dobry humor.",
+  "alt": "Wielokolorowy naszyjnik ze złotym medalikiem oraz bransoletka",
+  "naGlownej": true,
+  "kolejnoscGlowna": 7,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/kolorowy-medalion/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoMABAAA4BaJbACdLoAAzuZolxXqEAA/oUHprhhejk9XPrjBoY9AspAaqJsgyX65UOMLesJyheZIqqVzXMxYJnuglIdVOn+vgCnLv6PrhH/eAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolorowy-medalion/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoMABAAA4BaJbACdLoAAXxx8L4AAP7Q1cx1ONYAmnLPOAeMlmPo6SGNSgc4jV1EK8qrqmsTw8XaXoHyN/xedEVfZ3v2pRCQBTGAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/kolorowy-medalion/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoMABAAA4BaJQBOgCBUjOUiAAD+5/0W8BCNGr6GnRz843ZjN84bJnhZAtQefEsWo8PEAmVPpQJHRZeSdX6kgAAA"
+   },
+   {
+    "baza": "/zdjecia/p/kolorowy-medalion/04",
+    "alt": null,
+    "pozycja": "50% 65%",
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoMABAAA4BaJbACdADdQHvM6zgAAP6z9Ahb2fBFWsG0FwjDmiwKm+kbiPjytWVYdrTlolxF1SjRRlifD8bmOMS8x7PHgujNtb+lxyvMI+gmgAAA"
+   }
+  ]
+ },
+ {
+  "slug": "szary-medalion",
+  "nazwa": "Szary medalion",
+  "typ": "naszyjnik",
+  "opis": "Stonowane szarości i złota blaszka - elegancko na co dzień.",
+  "alt": "Szaro-czarny naszyjnik ze złotą okrągłą zawieszką",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/szary-medalion/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoMABAAA4BaJbACdAEOghg7bsAYAP70ouxJE5Ms2hiOae88qssbG0WHT3cl/fMhwrVAS6Nv9bYS576Rrynq2heavgAAAA=="
+   },
+   {
+    "baza": "/zdjecia/p/szary-medalion/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoMABAAA4BaJbACdAEPhRFtVZkAAP7xsw8pKWwUgBgHeCaHToHHW03l/nOan6FJ2aDcuj6VCr5MaIu4yq/nYkENxMNdfnjG2aqAAA=="
+   }
+  ]
+ },
+ {
+  "slug": "zielono-bialy",
+  "nazwa": "Zieleń i biel",
+  "typ": "zestaw",
+  "opis": "Zieleń, biel i odrobina czerni - świeży, naturalny zestaw.",
+  "alt": "Naszyjnik i bransoletka z zielonych, białych i czarnych koralików",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/zielono-bialy/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoMABAAA4BaJbACdAEOzZPNcmClAAD+9qDCJbAq9+vhn97XflbJiHJH7VUKwp9GEWJnH78bIIEVPpi8E4RjxOUDXOg3b6gAAAA="
+   },
+   {
+    "baza": "/zdjecia/p/zielono-bialy/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoMABAAA4BaJbACdAEO4/47fwAA/vDhX2eJpPiRcZo/pavpCjrig/Hevz8A9HWpZti4sy3+Apxyh0B+4XierA7/9vqU/XRRAAA="
+   },
+   {
+    "baza": "/zdjecia/p/zielono-bialy/03",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoMABAAA4BaJYgCdADdO0UfJHAA/pSrduDbbb5D3N5Ji5gCFqdwdJpCenAfcaziIOmDwh3T7JNnKUXEWXknZepQgAA="
+   },
+   {
+    "baza": "/zdjecia/p/zielono-bialy/04",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoMABAAA4BaJQBOgCLE56AAAP5qlF6K7VWBINdwyXyrM/jQpE4Tz49z/Ao9Z2S/AXJI4ZReiEOOWY5pAAA="
+   }
+  ]
+ },
+ {
+  "slug": "fioletowe-bransoletki",
+  "nazwa": "Fioletowe bransoletki",
+  "typ": "bransoletka",
+  "typEtykieta": "Dwie bransoletki",
+  "opis": "Fiolet w surowej formie - dwie bransoletki do noszenia razem.",
+  "alt": "Dwie bransoletki z fioletowymi kamieniami",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/fioletowe-bransoletki/01",
+    "alt": null,
+    "pozycja": "50% 45%",
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoMABAAA4BaJaACdAEfa+Faa3RgAP70ODbT2QuST1zKiO3eaIFAgQNRMe9bYS5yHI4ElbaAAAA="
+   },
+   {
+    "baza": "/zdjecia/p/fioletowe-bransoletki/02",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoMABAAA4BaJagCdAERHZ/rgAD+9DN22vboyGewacOaqwcjkZHHygLhlYjzFh6+xOtsHubN3kbbsHQAAAA="
+   }
+  ]
+ },
+ {
+  "slug": "perla-i-braz",
+  "nazwa": "Perła i brąz",
+  "typ": "bransoletka",
+  "opis": "Perła i ciepły brąz - spokojna bransoletka na każdy dzień.",
+  "alt": "Bransoletka z perełek i brązowych koralików w dłoni",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/perla-i-braz/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1200,
+    "h": 1600,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 360
+     },
+     {
+      "dluzszy": 800,
+      "w": 600
+     },
+     {
+      "dluzszy": 1200,
+      "w": 900
+     },
+     {
+      "dluzszy": 1600,
+      "w": 1200
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoMABAAA4BaJZACdAEUUeZ5Wl4AAP60G6OZt73GbNbYPDzI1O6VziRxbRpGIM097307Xpezhc3QqrhoSs0hfEcUAAA="
+   }
+  ]
+ },
+ {
+  "slug": "dlugi-naszyjnik",
+  "nazwa": "Długi naszyjnik",
+  "typ": "naszyjnik",
+  "opis": "Długi, w ciepłych kolorach - brąz i perła.",
+  "alt": "Długi naszyjnik z brązowych i perłowych koralików na kryształowym kielichu",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/dlugi-naszyjnik/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1122,
+    "h": 1402,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 384
+     },
+     {
+      "dluzszy": 800,
+      "w": 640
+     },
+     {
+      "dluzszy": 1200,
+      "w": 960
+     },
+     {
+      "dluzszy": 1402,
+      "w": 1122
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoNABAAA4BaJQBOgMYdpFPa9RYAAP7qNRHEn1B88Dj+VOr7ZqZ6Tr1g9CdCb0eBmQR5IDioe+RsGNVqDqzidcmqhtpFCi/xv0MYiUVVdafuWkQghN04AAAA"
+   }
+  ]
+ },
+ {
+  "slug": "trzy-bransoletki",
+  "nazwa": "Trio bransoletek",
+  "typ": "bransoletka",
+  "typEtykieta": "Trzy bransoletki",
+  "opis": "Trzy charaktery - do wyboru albo wszystkie naraz.",
+  "alt": "Trzy bransoletki z koralików na satynowym tle",
+  "naGlownej": false,
+  "kolejnoscGlowna": 0,
+  "wyrozniona": false,
+  "zdjecia": [
+   {
+    "baza": "/zdjecia/p/trzy-bransoletki/01",
+    "alt": null,
+    "pozycja": null,
+    "w": 1254,
+    "h": 1254,
+    "warianty": [
+     {
+      "dluzszy": 480,
+      "w": 480
+     },
+     {
+      "dluzszy": 800,
+      "w": 800
+     },
+     {
+      "dluzszy": 1200,
+      "w": 1200
+     },
+     {
+      "dluzszy": 1254,
+      "w": 1254
+     }
+    ],
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQAgCdASoQABAAA4BaJYwCdAYuax6k9t1AAP7sWPmL73zdSa531t37mTgI++plcMvqN1aCOy7nBLbNVpKbdhjVt4jJNuxJMN6837FKHMJEUYJHJK35bKPWHWKYdmJTam1TQGTBGGjOydhgAAA="
+   }
+  ]
+ }
+]

@@ -387,3 +387,46 @@
     margin-top: 0;
   }
 }
+
+/* liczby w karcie „Moc kamieni” */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin: auto 0 1.4rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--card-line);
+  list-style: none;
+  font-family: var(--font-sans-stack);
+  font-weight: 400;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--caramel);
+}
+.stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.stats strong {
+  font-family: var(--font-serif-stack);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2.1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--copper-deep);
+}
+
+@media (max-width: 1280px) {
+  .stats {
+    order: 3;
+    flex-basis: 100%;
+    margin: 0.4rem 0 0;
+  }
+}
+.intro .introText {
+  margin-bottom: 0;
+}

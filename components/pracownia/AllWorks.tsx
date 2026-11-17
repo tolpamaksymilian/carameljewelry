@@ -63,7 +63,7 @@ export function AllWorks({ prace }: { prace: Praca[] }) {
                     onClick={() => setGallery({ praca: p, index: i })}
                     aria-label={`${p.nazwa} - powiększ zdjęcie ${i + 1} z ${p.zdjecia.length}`}
                   >
-                    <Foto zdjecie={z} ratio="4 / 5" sizes="(max-width: 600px) 44vw, (max-width: 820px) 30vw, 190px" />
+                    <Foto zdjecie={z} ratio="4 / 5" sizes="(max-width: 600px) 46vw, (max-width: 820px) 24vw, 250px" />
                   </button>
                 </li>
               ))}

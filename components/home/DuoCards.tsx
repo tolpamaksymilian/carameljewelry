@@ -5,6 +5,7 @@ import { Foto } from "@/components/site/Foto";
 import { PhotoSlot } from "@/components/site/PhotoSlot";
 import ui from "@/components/site/ui.module.css";
 import { NA_ZAMOWIENIE } from "@/lib/prace";
+import { rich, t } from "@/lib/teksty";
 import styles from "./DuoCards.module.css";
 
 export function DuoCards() {
@@ -13,10 +14,8 @@ export function DuoCards() {
       <article className={`${ui.card} ${ui.lift} ${styles.card}`} data-reveal>
         <BeadCorners corners={["tl"]} />
         <div className={styles.copy}>
-          <p className={ui.eyebrow}>Biżuteria na zamówienie</p>
-          <h2 className={ui.cardTitle}>
-            Zaprojektuj ze mną <em className={ui.accent}>swoją biżuterię</em>
-          </h2>
+          <p className={ui.eyebrow}>{t("glowna.karta_zamowienie.nadtytul")}</p>
+          <h2 className={ui.cardTitle}>{rich("glowna.karta_zamowienie.tytul", ui.accent)}</h2>
           <Link href="/kontakt" className={`${ui.round} ${ui.roundDark} ${styles.arrow}`} aria-label="Zaprojektuj ze mną swoją biżuterię - napisz do mnie">
             <ArrowUpRightIcon />
           </Link>
@@ -33,12 +32,10 @@ export function DuoCards() {
       >
         <BeadCorners corners={["br"]} />
         <div className={styles.copy}>
-          <p className={ui.eyebrow}>Moc kamieni</p>
-          <h2 className={ui.cardTitle}>
-            Znajdź <em className={ui.accent}>swój kamień</em>
-          </h2>
-          <p className={styles.text}>Sprawdź, jaki kamień przypisany jest Twojemu znakowi zodiaku</p>
-          <Link href="/moc-kamieni" className={`${ui.round} ${ui.roundDark} ${styles.arrow}`} aria-label="Znajdź swój kamień - przejdź do Mocy kamieni">
+          <p className={ui.eyebrow}>{t("glowna.karta_kamienie.nadtytul")}</p>
+          <h2 className={ui.cardTitle}>{rich("glowna.karta_kamienie.tytul", ui.accent)}</h2>
+          <p className={styles.text}>{t("glowna.karta_kamienie.tekst")}</p>
+          <Link href="/moc-kamieni#znak" className={`${ui.round} ${ui.roundDark} ${styles.arrow}`} aria-label="Znajdź swój kamień - wybierz swój znak zodiaku">
             <ArrowUpRightIcon />
           </Link>
         </div>

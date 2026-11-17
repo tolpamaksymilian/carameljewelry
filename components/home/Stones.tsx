@@ -7,7 +7,8 @@ import { BeadCorners, BeadRow, SparkleField } from "@/components/site/Ornaments"
 import { PhotoSlot } from "@/components/site/PhotoSlot";
 import ui from "@/components/site/ui.module.css";
 import { GoldRule } from "@/components/stones/GoldRule";
-import { getGroup, GROUPS, nbsp, stoneHref, stonesByGroup, type GroupId } from "@/lib/stones";
+import { getGroup, GROUPS, nbsp, STONES, stoneHref, stonesByGroup, ZODIAK, type GroupId } from "@/lib/stones";
+import { t } from "@/lib/teksty";
 import styles from "./Stones.module.css";
 
 /** „Odkryj moc kamieni” - dane z lib/stones.ts (to samo źródło co podstrony /moc-kamieni). */
@@ -30,9 +31,18 @@ export function Stones() {
           <BeadCorners corners={["tr"]} />
           <SparkleField items={[{ left: "84%", top: "70%", size: 14, d: 1.2 }]} />
           <p className={ui.eyebrow}>Moc kamieni</p>
-          <p className={styles.introText}>
-            Każdy kamień ma swoją symbolikę i&nbsp;znaki zodiaku. Wybierz, czego szukasz, albo znajdź kamień dla swojego znaku.
-          </p>
+          <p className={styles.introText}>{t("glowna.kamienie.tekst")}</p>
+          <ul className={styles.stats}>
+            <li>
+              <strong>{STONES.length}</strong> kamieni
+            </li>
+            <li>
+              <strong>{GROUPS.length}</strong> grup
+            </li>
+            <li>
+              <strong>{ZODIAK.length}</strong> znaków zodiaku
+            </li>
+          </ul>
           <Link href="/moc-kamieni" className={ui.pill}>
             Przejdź do Mocy kamieni
             <ArrowUpRightIcon />

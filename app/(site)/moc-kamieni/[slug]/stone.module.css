@@ -198,7 +198,7 @@ a.label:hover {
 
 .facts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
   border: 1px solid var(--card-line);
   border-radius: var(--radius-card);
   background: var(--card);
@@ -364,6 +364,18 @@ a.label:hover {
   }
 }
 
+@media (max-width: 900px) {
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .facts {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   .notes {
     grid-template-columns: 1fr;
@@ -380,5 +392,20 @@ a.label:hover {
   .pagerHint {
     font-size: 0.56rem;
     letter-spacing: 0.14em;
+  }
+}
+
+/* ilustracja kamienia delikatnie „oddycha” (bardzo powolne przybliżenie) */
+@media (prefers-reduced-motion: no-preference) {
+  .photo img {
+    animation: stone-breathe 9s ease-in-out infinite alternate;
+  }
+}
+@keyframes stone-breathe {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.045);
   }
 }

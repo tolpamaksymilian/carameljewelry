@@ -7,6 +7,7 @@ import { CopperCorners, SparkleField } from "@/components/site/Ornaments";
 import { Foto } from "@/components/site/Foto";
 import ui from "@/components/site/ui.module.css";
 import type { Zdjecie } from "@/lib/prace-typy";
+import { rich, t } from "@/lib/teksty";
 import styles from "./Hero.module.css";
 
 type Slide = {
@@ -52,12 +53,8 @@ const SLIDES_BEZ_PIERWSZEGO: Slide[] = [
     alt: "Naszyjnik z pereł z zawieszką-truskawką na złotym widelcu, obok talerzyk w truskawki i rozsypane perły",
     position: "72% 50%",
     mobilePosition: "45% 50%",
-    eyebrow: "Naszyjnik Poziomka",
-    title: (
-      <>
-        Naszyjnik, który <em>pachnie latem</em>
-      </>
-    ),
+    eyebrow: t("glowna.hero.poziomka.nadtytul"),
+    title: rich("glowna.hero.poziomka.tytul"),
   },
   {
     file: "hero-2",
@@ -65,36 +62,24 @@ const SLIDES_BEZ_PIERWSZEGO: Slide[] = [
     position: "74% 50%",
     mobilePosition: "40% 50%",
     tone: "dark",
-    eyebrow: "Bransoletki z\u00A0koralików",
-    title: (
-      <>
-        Bransoletki, które <em>dodadzą Ci blasku</em>
-      </>
-    ),
+    eyebrow: t("glowna.hero.bransoletki.nadtytul"),
+    title: rich("glowna.hero.bransoletki.tytul"),
   },
   {
     file: "hero-3",
     alt: "Naszyjnik z miodowych koralików i pereł oraz złoty łańcuszek z medalikiem na modelce w beżowej marynarce",
     position: "80% 50%",
     mobilePosition: "50% 50%",
-    eyebrow: "Naszyjniki z\u00A0koralików",
-    title: (
-      <>
-        Naszyjnik, który <em>podkreśli Twoje piękno</em>
-      </>
-    ),
+    eyebrow: t("glowna.hero.naszyjniki.nadtytul"),
+    title: rich("glowna.hero.naszyjniki.tytul"),
   },
   {
     file: "hero-4",
     alt: "Naszyjnik i bransoletka z niebieskich kamieni na modelce w beżowej marynarce",
     position: "78% 50%",
     mobilePosition: "45% 50%",
-    eyebrow: "Naszyjnik i\u00A0bransoletka",
-    title: (
-      <>
-        Komplet, który <em>dopełni Twój styl</em>
-      </>
-    ),
+    eyebrow: t("glowna.hero.komplet.nadtytul"),
+    title: rich("glowna.hero.komplet.tytul"),
   },
 ];
 
@@ -112,12 +97,8 @@ const SLIDES: Slide[] = KOLEJNOSC.map((s, i) =>
   i === 0
     ? {
         ...s,
-        eyebrow: "Każdy koralik nawlekam ręcznie",
-        title: (
-          <>
-            Biżuteria, która opowiada <em>Twoją historię</em>
-          </>
-        ),
+        eyebrow: t("glowna.hero.haslo.nadtytul"),
+        title: rich("glowna.hero.haslo.tytul"),
       }
     : s,
 );
@@ -129,11 +110,13 @@ const pad = (n: number) => String(n).padStart(2, "0");
 type HeroProps = {
   /** Zdjęcie w karcie „Wyróżniona praca”. */
   wyrozniona: Zdjecie;
+  /** Wyróżniona praca (wybierana w panelu) - nazwa i kotwica w /pracownia. */
+  praca: { slug: string; nazwa: string };
   /** Rozmyte podglądy slajdów (lib/zdjecia.generated.ts → HERO_BLUR). */
   blur: Record<string, { wide: string; mobile: string }>;
 };
 
-export function Hero({ wyrozniona, blur }: HeroProps) {
+export function Hero({ wyrozniona, praca, blur }: HeroProps) {
   const [index, setIndex] = useState(0);
   const touchX = useRef<number | null>(null);
   const dark = SLIDES[index].tone === "dark";
@@ -266,6 +249,17 @@ export function Hero({ wyrozniona, blur }: HeroProps) {
         </div>
       </div>
 
+      {/* telefon: te same przyciski pod zdjęciem (w hero są ukryte, żeby nie zasłaniały biżuterii) */}
+      <div className={styles.ctasBelow}>
+        <Link href="/pracownia#wszystkie-prace" className={ui.pill}>
+          Zobacz moje prace
+        </Link>
+        <Link href="/moc-kamieni" className={`${ui.pill} ${ui.pillOutline}`}>
+          Znajdź swój kamień
+          <ArrowUpRightIcon />
+        </Link>
+      </div>
+
       <aside className={styles.side} aria-label="Wyróżnione">
         <article className={`${styles.featured} ${ui.lift}`} data-reveal style={{ "--reveal-delay": "0.5s" } as React.CSSProperties}>
           <div className={styles.featuredPhoto}>
@@ -274,18 +268,16 @@ export function Hero({ wyrozniona, blur }: HeroProps) {
           </div>
           <div className={styles.featuredBody}>
             <p className={styles.featuredKicker}>Wyróżniona praca</p>
-            <h2 className={styles.featuredName}>Poziomka</h2>
-            <p className={styles.featuredText}>Naszyjnik z&nbsp;koralików&nbsp;- ręcznie nawlekany</p>
+            <h2 className={styles.featuredName}>{praca.nazwa}</h2>
+            <p className={styles.featuredText}>{t("glowna.hero.wyrozniona.podpis")}</p>
           </div>
-          <Link href="/pracownia#poziomka" className={`${ui.round} ${ui.roundDark} ${styles.featuredLink}`} aria-label="Poziomka - zobacz pracę">
+          <Link href={`/pracownia#${praca.slug}`} className={`${ui.round} ${ui.roundDark} ${styles.featuredLink}`} aria-label={`${praca.nazwa} - zobacz pracę`}>
             <ArrowUpRightIcon />
           </Link>
         </article>
 
         <article className={`${styles.custom} ${ui.lift}`} data-reveal style={{ "--reveal-delay": "0.65s" } as React.CSSProperties}>
-          <p className={styles.customText}>
-            Chcesz coś tylko dla&nbsp;siebie? <em>Zaprojektujmy to&nbsp;razem.</em>
-          </p>
+          <p className={styles.customText}>{rich("glowna.hero.zamowienie")}</p>
           <Link href="/kontakt" className={`${ui.round} ${styles.plus}`} aria-label="Zaprojektujmy razem - napisz do mnie">
             <PlusIcon />
           </Link>

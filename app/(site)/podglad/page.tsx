@@ -6,7 +6,7 @@ import { Studio } from "@/components/home/Studio";
 import { Works } from "@/components/home/Works";
 import { JsonLd } from "@/components/site/JsonLd";
 import { SectionDivider } from "@/components/site/Ornaments";
-import { PRACE_NA_GLOWNEJ, WYROZNIONA } from "@/lib/prace";
+import { PRACE_NA_GLOWNEJ, WYROZNIONA, WYROZNIONA_PRACA } from "@/lib/prace";
 import { listaPracLd, meta } from "@/lib/seo";
 import { HERO_BLUR } from "@/lib/zdjecia.generated";
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = meta({
 export default function PreviewHome() {
   return (
     <>
-      <Hero wyrozniona={WYROZNIONA} blur={HERO_BLUR} />
+      <Hero wyrozniona={WYROZNIONA} praca={{ slug: WYROZNIONA_PRACA.slug, nazwa: WYROZNIONA_PRACA.nazwa }} blur={HERO_BLUR} />
       <DuoCards />
       <Works prace={PRACE_NA_GLOWNEJ} />
       <SectionDivider pull />

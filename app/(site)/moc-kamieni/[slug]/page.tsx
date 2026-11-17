@@ -15,6 +15,18 @@ import styles from "./stone.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Opis do wyszukiwarki: opis kamienia (albo symbolika i intencja), maks. 155 znaków - całymi zdaniami. */
+function opisMeta(stone: NonNullable<ReturnType<typeof getStone>>) {
+  const t = stone.description ?? stoneSummary(stone);
+  if (t.length <= 155) return t;
+  let out = "";
+  for (const z of t.match(/[^.!?]+[.!?]/g) ?? [t]) {
+    if ((out + z).trim().length > 155) break;
+    out = (out + z).trim() + " ";
+  }
+  return out.trim() || t.slice(0, 152) + "…";
+}
+
 /** Eksport statyczny: osobna strona dla każdego kamienia. */
 export function generateStaticParams() {
   return STONES.map((s) => ({ slug: s.slug }));
@@ -28,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!stone) return {};
   return meta({
     title: `${stone.name} - znaczenie kamienia | Caramel Jewelry`,
-    description: stoneSummary(stone),
+    description: opisMeta(stone),
     path: stoneHref(stone.slug),
     type: "article",
   });
@@ -117,7 +129,12 @@ export default async function StonePage({ params }: Props) {
 
       {/* ---------- Karta kamienia ---------- */}
       {(fakty.length > 0 || stone.numerology) && (
-        <section className={styles.facts} aria-labelledby="karta-kamienia" data-reveal>
+        <section
+          className={styles.facts}
+          aria-labelledby="karta-kamienia"
+          data-reveal
+          style={{ "--cols": fakty.length + (stone.numerology ? 1 : 0) } as React.CSSProperties}
+        >
           <h2 id="karta-kamienia" className="visually-hidden">
             Karta kamienia
           </h2>
@@ -158,7 +175,7 @@ export default async function StonePage({ params }: Props) {
           data-reveal
           style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}
         >
-          <p className={styles.smallHead}>Żeby długo cieszył</p>
+          <p className={styles.smallHead}>Na długie lata</p>
           <h2 id="pielegnacja" className={styles.noteTitle}>
             Pielęgnacja
           </h2>

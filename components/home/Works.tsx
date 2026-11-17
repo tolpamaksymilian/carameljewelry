@@ -7,6 +7,7 @@ import { FanOrnament } from "@/components/site/Ornaments";
 import { Lightbox } from "@/components/site/Lightbox";
 import { Foto } from "@/components/site/Foto";
 import ui from "@/components/site/ui.module.css";
+import { t } from "@/lib/teksty";
 import { etykietaTypu, liczbaZdjec, maBransoletke, maNaszyjnik, type Praca } from "@/lib/prace-typy";
 import styles from "./Works.module.css";
 
@@ -73,11 +74,11 @@ export function Works({ prace }: { prace: Praca[] }) {
     <section id="prace" className={`${ui.section} ${styles.section}`} aria-labelledby="prace-title">
       <div className={styles.head} data-reveal>
         <h2 id="prace-title" className={`${ui.title} ${styles.heading}`}>
-          <span className={styles.line1}>Ręcznie zrobione</span>
+          <span className={styles.line1}>{t("glowna.prace.tytul")}</span>
           <span className={styles.middle} aria-hidden="true">
             <FanOrnament />
           </span>
-          <em className={styles.line2}>dla Ciebie</em>
+          <em className={styles.line2}>{t("glowna.prace.tytul_akcent")}</em>
         </h2>
         <Link href="/pracownia#wszystkie-prace" className={`${ui.pill} ${ui.pillOutline} ${styles.all}`}>
           Zobacz wszystkie
@@ -86,10 +87,7 @@ export function Works({ prace }: { prace: Praca[] }) {
       </div>
 
       <div className={styles.intro} data-reveal>
-        <p className={`${ui.text} ${styles.lead}`}>
-          Każdy koralik nawlekam z&nbsp;myślą o&nbsp;osobie, która będzie go nosić. Nie znajdziesz tu masowej produkcji&nbsp;-
-          każda praca powstaje w&nbsp;mojej pracowni.
-        </p>
+        <p className={`${ui.text} ${styles.lead}`}>{t("glowna.prace.wstep")}</p>
         <ul className={ui.filters} aria-label="Filtruj prace">
           {FILTERS.map((f) => (
             <li key={f.id}>

@@ -90,3 +90,54 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Telefon i mały tablet: niższe, poziome karty - tekst po lewej, zdjęcie po prawej ---------- */
+@media (max-width: 720px) {
+  .grid {
+    gap: 0.7rem;
+  }
+  .card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.9rem;
+    min-height: 0;
+    padding: 1.9rem 1.1rem 1.4rem 1.3rem;
+  }
+  .copy {
+    gap: 0.6rem;
+  }
+  .copy :global(h2) {
+    font-size: 1.55rem;
+  }
+  .text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .arrow {
+    --round: 46px;
+    margin-top: 0.3rem;
+  }
+  .circle,
+  .stack {
+    order: 0;
+    justify-self: end;
+    align-self: center;
+  }
+  .circle {
+    width: 108px;
+    padding: 4px;
+  }
+  .stack {
+    flex-direction: column;
+  }
+  .stone {
+    width: 62px;
+  }
+  .stone + .stone {
+    margin-left: 0;
+    margin-top: -16px;
+  }
+  .stone:nth-child(2) {
+    transform: translateX(-18px);
+  }
+}

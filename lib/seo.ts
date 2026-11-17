@@ -7,7 +7,8 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import type { Praca } from "./prace-typy";
 import { etykietaTypu } from "./prace-typy";
-import { adres, GEO, O_MNIE, OG_IMAGE, SITE_NAME, SITE_URL } from "./site";
+import { adres, GEO, OG_IMAGE, SITE_NAME, SITE_URL } from "./site";
+import { czysty } from "./teksty";
 import type { Stone } from "./stones";
 
 const bez = (tekst: string) => tekst.replace(/ /g, " ");
@@ -51,7 +52,7 @@ export function organizacjaLd() {
     url: `${SITE_URL}/`,
     logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/caramel-logo.webp`, width: 1626, height: 814 },
     image: OG_IMAGE.url,
-    description: O_MNIE,
+    description: czysty("wspolne.o_mnie"),
     sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
     // dane lokalne pojawią się po uzupełnieniu GEO w lib/site.ts
     ...(GEO.miasto
@@ -69,7 +70,7 @@ export function witrynaLd() {
     name: SITE_NAME,
     url: `${SITE_URL}/`,
     inLanguage: "pl-PL",
-    description: O_MNIE,
+    description: czysty("wspolne.o_mnie"),
     publisher: { "@id": ORG_ID },
   };
 }

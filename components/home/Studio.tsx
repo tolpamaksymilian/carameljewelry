@@ -4,6 +4,7 @@ import { Foto } from "@/components/site/Foto";
 import ui from "@/components/site/ui.module.css";
 import { siteConfig } from "@/config/site";
 import { PASEK_INSTAGRAM } from "@/lib/prace";
+import { rich } from "@/lib/teksty";
 import styles from "./Studio.module.css";
 
 export function Studio() {
@@ -18,9 +19,7 @@ export function Studio() {
       />
       <div className={styles.head}>
         <p className={ui.eyebrow}>{siteConfig.social.instagramHandle}</p>
-        <h2 id="pracownia-title" className={ui.title}>
-          Zajrzyj do <em>mojej pracowni</em>
-        </h2>
+        <h2 id="pracownia-title" className={ui.title}>{rich("glowna.instagram.tytul")}</h2>
       </div>
 
       <ul className={styles.grid}>

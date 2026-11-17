@@ -19,12 +19,17 @@ export function StoneList() {
   const [znak, setZnak] = useState<Znak | null>(null);
   const wrap = useRef<HTMLDivElement>(null);
 
-  // kotwice z innych stron: #znak-baran albo #cel-spokoj
+  // kotwice z innych stron: #znak (wybór znaku), #znak-baran albo #cel-spokoj
   useEffect(() => {
     const zKotwicy = () => {
       const h = decodeURIComponent(window.location.hash.slice(1));
       const z = ZODIAK.find((x) => `znak-${x.slug}` === h);
       const g = GROUPS.find((x) => `cel-${x.id}` === h);
+      if (h === "znak") {
+        setTryb("znak");
+        requestAnimationFrame(() => wrap.current?.scrollIntoView({ block: "start" }));
+        return;
+      }
       if (!z && !g) return;
       if (z) {
         setTryb("znak");
